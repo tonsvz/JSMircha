@@ -170,3 +170,59 @@ console.log("Domingo");
 
    
 }
+
+//loops 
+
+let contador = 0;
+while (contador < 10) {
+    console.log("While"+contador)
+    contador++;
+    
+}
+
+do {
+    console.log("Do While"+contador);
+} while (contador < 10);
+
+/* for (inicializacion de la variable; condicion a evaluar; decremento o incremento){
+    //sentencias que ejecutara el for
+
+}*/
+
+for (let i = 0; i<10; i++) {
+console.log("for" + i);    
+}
+
+let numeros = [10,20,30,40,50,60,70,80,90,100];
+
+for (let i = 0; i < numeros.length; i++) {
+console.log(numeros[i]);    
+}
+ //Cabe destacar que la propiedad FOR es mas completa y actual que usar while y do while.
+
+const tonsvz = {nombre:"Tony", apellido:"Veliz", edad: 30}
+
+for (const property in tonsvz) {
+    console.log(`Key:${property}, Value:${tonsvz[property]}`);
+   
+}
+
+//For In solo permite recorrer propiedades de un objeto
+
+
+for (const element of numeros) {
+    console.log(element);
+    
+}
+
+let cadena = "Hello World";
+for (const textElement of cadena) {
+    console.log(textElement);
+    
+}
+
+//Iteracion es recorrer un elemento, se podria considderar algo parecido a una revolucion de una llanta.
+
+//For of permite recorrer todos los elementos de cualquier objeto que sea iterable en javascript
+
+
