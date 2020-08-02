@@ -1,4 +1,4 @@
-let nombre = "Tony PC";
+let nombre = "Tony";
 let apellido = "Veliz"
 let saludo = new String("Hola Mundo")
 let lorem = "lorem lorem lorem lomem ipsum dolor dolor"
