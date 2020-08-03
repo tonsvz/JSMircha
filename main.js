@@ -249,3 +249,24 @@ try {
     console.log(`Se produjo el siguiente error:${error}`);
     
 }
+
+//Comentarios Git
+/*
+git init <= iniciar proyecto
+git remote add origin *url* <== Enlazar proyecto
+git clone *url* <= clonar proyecto existente
+
+
+//Actualizar proyecto de repositorio
+git fetch origin
+git reset --hard origin/master
+git pull <= opcional
+
+
+//Commit y Push
+
+git commit -a <= abre nueva ventana para ingresar comentario
+
+git push origin master => hace el push dire
+
+*/
