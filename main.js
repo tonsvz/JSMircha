@@ -221,8 +221,32 @@ for (const textElement of cadena) {
     
 }
 
-//Iteracion es recorrer un elemento, se podria considderar algo parecido a una revolucion de una llanta.
-
 //For of permite recorrer todos los elementos de cualquier objeto que sea iterable en javascript
 
+//Iteracion es recorrer un elemento, se podria considderar algo parecido a una revolucion de una llanta.
 
+//Manejo de errores
+try {
+    console.log("En el try se agrega el codigo a evaluar");
+    noExiste;
+    console.log("Segundo mensaje en el try");
+} catch (error) {
+    console.log("catch captura cualquier error surgido o lanzado en el try");
+    console.log(error);
+}finally{//esta propiedad no es muy utilizada actualmente
+    console.log("El bloque Finally se ejecutara siempre al final de un bloque try-catch");
+}
+
+
+try {
+    let number = "this";
+    if (isNaN(number)) {  //is "NOT A NUMBER" evalua si lo introducido en la variaable es un numero o no
+        throw new Error("El Caracter introducido no es un numero.")// Si no es un numero imprime este error
+    }
+
+    console.log(number*number);//Si es un numero, hace la operacion matematica con normalidad.
+} catch (error) {
+    console.log(`Se produjo el siguiente error:${error}`);
+    
+}
+    
