@@ -339,3 +339,33 @@ const dog = {
 console.log(dog)
 dog.ladrar();
 
+// Parametros REST
+
+function sumar(a,b,...c) {
+    let result =  a + b ;
+    c.forEach(function (n) {
+        result += n 
+        
+    });
+
+return result;
+}
+console.log(sumar(1,2));
+console.log(sumar(1,2,3,4));
+console.log(sumar(1,2,4,5));
+console.log(sumar(1,2,3,4,5));
+
+
+//Operadores Spread
+
+const arr1 = [1,2,3,4,5],
+      arr2 = [5,6,7,8,9];
+      
+
+console.log( arr1,arr2);
+const arr3 = [arr1,arr2] //=> crea 1 arreglo de 2 posiciones, es decir 2 arreglos internos (2)([1,2,3,4,5], [6,7,8,9,0])
+const arr4 = [...arr1,...arr2] // => con este operador (...) unimos los 2 arreglos citados y formamos 1 arreglo con los elementos de los 2 anteriores (1) [1,2,3,4,5,6,7,8,9,0]
+console.log(arr3);
+console.log(arr4);
+
+//... nos permite unir 2 o 3 arreglos a uno solo.
