@@ -369,3 +369,5 @@ console.log(arr3);
 console.log(arr4);
 
 //... nos permite unir 2 o 3 arreglos a uno solo.
+
+//arrow functions ()=>{}
