@@ -293,3 +293,5 @@ for (let i = 0; i< theNumbers.length; i++) {
     }
 console.log(theNumbers[i]);
 }
+
+// Destructuracion
