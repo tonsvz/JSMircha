@@ -132,10 +132,10 @@ let dia = 0;
 
 switch (dia) {
     case 0:
-console.log("Domingo");
+        console.log("Domingo");
         break;
 
-        case 1:
+    case 1:
         console.log("Lunes");
 
         break;
@@ -154,7 +154,7 @@ console.log("Domingo");
         console.log("Jueves");
 
         break;
-  
+
     case 5:
         console.log("Viernes");
 
@@ -168,20 +168,20 @@ console.log("Domingo");
         console.log("El dia no existe");
         break;
 
-   
+
 }
 
 //loops 
 
 let contador = 0;
 while (contador < 10) {
-    console.log("While"+contador)
+    console.log("While" + contador)
     contador++;
-    
+
 }
 
 do {
-    console.log("Do While"+contador);
+    console.log("Do While" + contador);
 } while (contador < 10);
 
 /* for (inicializacion de la variable; condicion a evaluar; decremento o incremento){
@@ -189,22 +189,26 @@ do {
 
 }*/
 
-for (let i = 0; i<10; i++) {
-console.log("for" + i);    
+for (let i = 0; i < 10; i++) {
+    console.log("for" + i);
 }
 
-let numeros = [10,20,30,40,50,60,70,80,90,100];
+let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 
 for (let i = 0; i < numeros.length; i++) {
-console.log(numeros[i]);    
+    console.log(numeros[i]);
 }
- //Cabe destacar que la propiedad FOR es mas completa y actual que usar while y do while.
+//Cabe destacar que la propiedad FOR es mas completa y actual que usar while y do while.
 
-const tonsvz = {nombre:"Tony", apellido:"Veliz", edad: 30}
+const tonsvz = {
+    nombre: "Tony",
+    apellido: "Veliz",
+    edad: 30
+}
 
 for (const property in tonsvz) {
     console.log(`Key:${property}, Value:${tonsvz[property]}`);
-   
+
 }
 
 //For In solo permite recorrer propiedades de un objeto
@@ -212,13 +216,13 @@ for (const property in tonsvz) {
 
 for (const element of numeros) {
     console.log(element);
-    
+
 }
 
 let cadena = "Hello World";
 for (const textElement of cadena) {
     console.log(textElement);
-    
+
 }
 
 //For of permite recorrer todos los elementos de cualquier objeto que sea iterable en javascript
@@ -233,21 +237,21 @@ try {
 } catch (error) {
     console.log("catch captura cualquier error surgido o lanzado en el try");
     console.log(error);
-}finally{//esta propiedad no es muy utilizada actualmente
+} finally { //esta propiedad no es muy utilizada actualmente
     console.log("El bloque Finally se ejecutara siempre al final de un bloque try-catch");
 }
 
 
 try {
     let number = "this";
-    if (isNaN(number)) {  //is "NOT A NUMBER" evalua si lo introducido en la variaable es un numero o no
-        throw new Error("El Caracter introducido no es un numero.")// Si no es un numero imprime este error
+    if (isNaN(number)) { //is "NOT A NUMBER" evalua si lo introducido en la variaable es un numero o no
+        throw new Error("El Caracter introducido no es un numero.") // Si no es un numero imprime este error
     }
 
-    console.log(number*number);//Si es un numero, hace la operacion matematica con normalidad.
+    console.log(number * number); //Si es un numero, hace la operacion matematica con normalidad.
 } catch (error) {
     console.log(`Se produjo el siguiente error:${error}`);
-    
+
 }
 
 //Comentarios Git
@@ -274,24 +278,64 @@ git push origin master => hace el push dire
 /*Break y Continue*/ //cambios en laptop.
 
 
-const theNumbers = [1,2,3,4,5,6,7,8,9,0];
+const theNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 
-for (let i = 0; i< theNumbers.length; i++) {
-    if (i===5) {
+for (let i = 0; i < theNumbers.length; i++) {
+    if (i === 5) {
         break;
-        
+
     }
 
-    
-console.log(theNumbers[i]);
+
+    console.log(theNumbers[i]);
 }
 
-for (let i = 0; i< theNumbers.length; i++) {
-    if (i===5) {
+for (let i = 0; i < theNumbers.length; i++) {
+    if (i === 5) {
         continue;
-        
+
     }
-console.log(theNumbers[i]);
+    console.log(theNumbers[i]);
 }
 
-// Destructuracion
+// Destructuracion clase
+
+const destruc = [1, 2, 3]
+// Sin Destructurar
+let uno = destruc[0],
+    dos = destruc[1],
+    tres = destruc[2];
+console.log(uno, dos, tres);
+
+//Con Destructuracion
+
+const [one, two, three] = destruc;
+console.log(one, two, three);
+
+////////////////////////////////////
+    let person = {
+        name: "tony",
+        lastname: "veliz",
+        age: 35
+    }
+let {
+    name,
+    lastname,
+    age
+} = person;
+console.log(name, lastname, age);
+////////////////////////////////////////
+
+//Objetos literales, EC6
+let nombrePerro = "Oslo",
+edadPerro = 2;
+
+const dog = {
+    nombrePerro , edadPerro, raza:"callejero", ladrar(){
+        console.log("guaaau guaaau guaaaau!")
+    }, color:"blanco"
+}
+
+console.log(dog)
+dog.ladrar();
+
