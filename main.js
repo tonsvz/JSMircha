@@ -313,11 +313,11 @@ const [one, two, three] = destruc;
 console.log(one, two, three);
 
 ////////////////////////////////////
-    let person = {
-        name: "tony",
-        lastname: "veliz",
-        age: 35
-    }
+let person = {
+    name: "tony",
+    lastname: "veliz",
+    age: 35
+}
 let {
     name,
     lastname,
@@ -328,12 +328,16 @@ console.log(name, lastname, age);
 
 //Objetos literales, EC6
 let nombrePerro = "Oslo",
-edadPerro = 2;
+    edadPerro = 2;
 
 const dog = {
-    nombrePerro , edadPerro, raza:"callejero", ladrar(){
+    nombrePerro,
+    edadPerro,
+    raza: "callejero",
+    ladrar() {
         console.log("guaaau guaaau guaaaau!")
-    }, color:"blanco"
+    },
+    color: "blanco"
 }
 
 console.log(dog)
@@ -341,33 +345,76 @@ dog.ladrar();
 
 // Parametros REST
 
-function sumar(a,b,...c) {
-    let result =  a + b ;
+function sumar(a, b, ...c) {
+    let result = a + b;
     c.forEach(function (n) {
-        result += n 
-        
+        result += n
+
     });
 
-return result;
+    return result;
 }
-console.log(sumar(1,2));
-console.log(sumar(1,2,3,4));
-console.log(sumar(1,2,4,5));
-console.log(sumar(1,2,3,4,5));
+console.log(sumar(1, 2));
+console.log(sumar(1, 2, 3, 4));
+console.log(sumar(1, 2, 4, 5));
+console.log(sumar(1, 2, 3, 4, 5));
 
 
 //Operadores Spread
 
-const arr1 = [1,2,3,4,5],
-      arr2 = [5,6,7,8,9];
-      
+const arr1 = [1, 2, 3, 4, 5],
+    arr2 = [5, 6, 7, 8, 9];
 
-console.log( arr1,arr2);
-const arr3 = [arr1,arr2] //=> crea 1 arreglo de 2 posiciones, es decir 2 arreglos internos (2)([1,2,3,4,5], [6,7,8,9,0])
-const arr4 = [...arr1,...arr2] // => con este operador (...) unimos los 2 arreglos citados y formamos 1 arreglo con los elementos de los 2 anteriores (1) [1,2,3,4,5,6,7,8,9,0]
+
+console.log(arr1, arr2);
+const arr3 = [arr1, arr2] //=> crea 1 arreglo de 2 posiciones, es decir 2 arreglos internos (2)([1,2,3,4,5], [6,7,8,9,0])
+const arr4 = [...arr1, ...arr2] // => con este operador (...) unimos los 2 arreglos citados y formamos 1 arreglo con los elementos de los 2 anteriores (1) [1,2,3,4,5,6,7,8,9,0]
 console.log(arr3);
 console.log(arr4);
 
 //... nos permite unir 2 o 3 arreglos a uno solo.
 
+
 //arrow functions ()=>{}
+
+//Diferencias
+//Cuando una funcion flecha no recibe parametros es obligatorio el uso de las llaves {}
+const salute1 = () => {
+    console.log("Hola Tony1");
+}
+salute1()
+
+//cuando una funcion flecha recibe parametros puede ejecutarse sin el parentesis () de los parametros y sin las llaves {}
+const salute = name => console.log(`Hola ${name}`);
+salute("tony");
+
+
+const add1 = function (a,b) {
+    return a+b
+}
+console.log(add1(3,3), "using normal function");     //Manera clasica de declarar funciones
+
+const add = (a,b) => a+b;
+console.log(add(2,3), "using arrow function () =>  ");      // Manera usando Arrow Functions, () Los parentesis de parametros solo se omiten si se ingresa 1 solo parametro, mas de 1 necesitara usarse parentesis, pero pueden seguir omitiendose las llaves {}.
+
+const variousLettersFunction = () =>{ // Con mas de 3 lineas de comando se necesitara usar {} obligatoriamente.
+    console.log("one");
+    console.log("two");
+    console.log("three");
+}
+
+variousLettersFunction();
+
+const numberArray = [0,1,2,3,4]
+numberArray.forEach((el,index) => console.log(`El elemento ${el} esta en la posicion ${index}`));
+  
+const perro = {
+    name:"Oslo",
+    bark() {
+        console.log(this);
+    }
+}
+
+perro.bark()
+
+//las arrow function tienen la capacidad de saltar el contexto en el que se encuentran (en este caso el objeto) y heredar o reconocer el contexto en donde se encuentra su objeto padre donde ha sido declarado.
