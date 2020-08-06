@@ -389,15 +389,15 @@ const salute = name => console.log(`Hola ${name}`);
 salute("tony");
 
 
-const add1 = function (a,b) {
-    return a+b
+const add1 = function (a, b) {
+    return a + b
 }
-console.log(add1(3,3), "using normal function");     //Manera clasica de declarar funciones
+console.log(add1(3, 3), "using normal function"); //Manera clasica de declarar funciones
 
-const add = (a,b) => a+b;
-console.log(add(2,3), "using arrow function () =>  ");      // Manera usando Arrow Functions, () Los parentesis de parametros solo se omiten si se ingresa 1 solo parametro, mas de 1 necesitara usarse parentesis, pero pueden seguir omitiendose las llaves {}.
+const add = (a, b) => a + b;
+console.log(add(2, 3), "using arrow function () =>  "); // Manera usando Arrow Functions, () Los parentesis de parametros solo se omiten si se ingresa 1 solo parametro, mas de 1 necesitara usarse parentesis, pero pueden seguir omitiendose las llaves {}.
 
-const variousLettersFunction = () =>{ // Con mas de 3 lineas de comando se necesitara usar {} obligatoriamente.
+const variousLettersFunction = () => { // Con mas de 3 lineas de comando se necesitara usar {} obligatoriamente.
     console.log("one");
     console.log("two");
     console.log("three");
@@ -405,11 +405,11 @@ const variousLettersFunction = () =>{ // Con mas de 3 lineas de comando se neces
 
 variousLettersFunction();
 
-const numberArray = [0,1,2,3,4]
-numberArray.forEach((el,index) => console.log(`El elemento ${el} esta en la posicion ${index}`));
-  
+const numberArray = [0, 1, 2, 3, 4]
+numberArray.forEach((el, index) => console.log(`El elemento ${el} esta en la posicion ${index}`));
+
 const perro = {
-    name:"Oslo",
+    name: "Oslo",
     bark() {
         console.log(this);
     }
@@ -425,5 +425,45 @@ perro.bark()
 /*
 Clases - Modelo a seguir
 Objetos - Es una instancia de clase
-Atributos - 
-Metodos - 
+Atributos - Es una caracteristica o propiedad dele objeto, son variables dentro de un objeto
+Metodos - Son las acciones que un objeto puede realizar.*/
+
+//Prototipo es un mecanismo por el cual un objeto puede heredar atributos y metodos (ahi la importancia de los conceptos mencionados ^) de un objeto padre
+
+// const animal = {
+//     name:"Rex",
+//     sound(){
+//         console.log("Hago sonidos porque estoy vivo");
+//     }
+// }
+
+// const animal2 = {
+//     name:"Zeus",
+//     sound(){
+//         console.log("Hago sonidos porque estoy vivo");
+//     }
+// }
+
+
+// console.log(animal);
+// console.log(animal2);
+
+
+
+//Funcion Constructora
+function Animal(nombre, genero) {
+    //Atributos
+    this.nombre = nombre;
+    this.genero = genero;
+    //Metodos
+    this.sonar = function () {
+        console.log("Hago sonidos porque estoy vivo");
+
+    }
+}
+
+const snoopy = new Animal("Snoopy", "Macho"),
+lolaBunny = new Animal ("Lola Bunny", "Hembra")
+
+console.log(snoopy);
+console.log(lolaBunny)
