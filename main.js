@@ -418,3 +418,12 @@ const perro = {
 perro.bark()
 
 //las arrow function tienen la capacidad de saltar el contexto en el que se encuentran (en este caso el objeto) y heredar o reconocer el contexto en donde se encuentra su objeto padre donde ha sido declarado.
+
+//Protoipos
+
+//POO => Acronimo de Programacion Orientada a Objetos
+/*
+Clases - Modelo a seguir
+Objetos - Es una instancia de clase
+Atributos - 
+Metodos - 
