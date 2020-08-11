@@ -453,10 +453,10 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 //Funcion Constructora
 
 // function Animal(nombre, genero) {
-//     Atributos
+//    // Atributos
 //     this.nombre = nombre;
 //     this.genero = genero;
-//     Metodos
+//    // Metodos
 //     this.sonar = function () {
 //         console.log("Hago sonidos porque estoy vivo");
      
@@ -482,31 +482,57 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 
 //Codigo Optimizado, funcion constructora donde se asisgnan los metodos al prototipo, no a la funcion como tal.
 //Funcion Constructora Optimizada donde asignamos los metodos al prototipo y no a la funcion como tal.
-function Animal(nombre, genero) {
-    //Atributos
-    this.nombre = nombre;
-    this.genero = genero;
-}
-//Metodos agregados al prototipo de la funcion constructora.
-    Animal.prototype.sonar = function () {
-        console.log("Hago sonidos porque estoy vivo");
+
+// function Animal(nombre, genero) {
+//     Atributos
+//     this.nombre = nombre;
+//     this.genero = genero;
+// }
+// Metodos agregados al prototipo de la funcion constructora.
+//     Animal.prototype.sonar = function () {
+//         console.log("Hago sonidos porque estoy vivo");
      
-    }        
-    Animal.prototype.saludar = function () {
-        console.log(`Hola me llamo ${this.nombre}`);
+//     }        
+//     Animal.prototype.saludar = function () {
+//         console.log(`Hola me llamo ${this.nombre}`);
    
-    }
+//     }
+
+//     Herencia Prototipal
+//     function Perro(nombre, genero, tamanio) {
+//         this.super= Animal;
+//         this.super(nombre,genero);
+//         this.tamanio = tamanio;
+//     }
+
+//     Perro esta heredando  de Animal
+//     Perro.prototype = new Animal();
+//     Perro.prototype.constructor = Perro;
+
+//     Sobreescritura dele prototipo padre en hijo;
+//     Perro.prototype.sonar = function () {
+//         console.log("Soy un perro y ladro");
+        
+//     }
+
+//     Perro.prototype.ladrar = function () {
+//         console.log("Guau Guau x3");
+        
+//     }
 
 
-const snoopy = new Animal("Snoopy", "Macho"),
-lolaBunny = new Animal ("Lola Bunny", "Hembra")
 
-console.log(snoopy);
-console.log(lolaBunny);
+// const snoopy = new Perro("Snoopy", "Macho", "Mediano"),
+// lolaBunny = new Animal("Lola Bunny", "Hembra")
 
-snoopy.sonar();
-snoopy.saludar();
+// console.log(snoopy);
+// console.log(lolaBunny);
 
-lolaBunny.sonar();
-lolaBunny.saludar();
+// snoopy.sonar();
+// snoopy.saludar();
+// snoopy.ladrar();
+
+// lolaBunny.sonar();
+// lolaBunny.saludar();
+
 
