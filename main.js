@@ -535,4 +535,48 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 // lolaBunny.sonar();
 // lolaBunny.saludar();
 
+class randomPeople {
+    constructor(name,gender) {
+        this.name = name;
+        this.gender = gender;
+       
+    }
 
+    //methods
+
+    voice() {
+        console.log("hello,this is my voice");
+
+    }
+
+    salute(){
+        console.log("and this is how i say hello to you");
+    }
+
+}
+
+class personData extends randomPeople {
+    constructor(name,gender,id){
+        //super es un metodo que manda a llamar el constructor de la clase padre.
+        super(name,gender)
+        this.id = id;
+
+    }
+
+    likes(){
+        console.log("Me gusta la buena musica");
+    }
+
+}
+
+const ppl1 = new personData("Tony Veliz", "Male", "18946281"),
+ppl2 = new randomPeople ("Carlos", "Male")
+
+
+console.log(ppl1);
+ppl1.voice();
+ppl1.salute();
+
+console.log(ppl2);
+ppl2.voice();
+ppl2.salute();
