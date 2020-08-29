@@ -580,3 +580,5 @@ ppl1.salute();
 console.log(ppl2);
 ppl2.voice();
 ppl2.salute();
+
+
