@@ -539,6 +539,7 @@ class randomPeople {
     constructor(name,gender) {
         this.name = name;
         this.gender = gender;
+        
        
     }
 
@@ -553,6 +554,8 @@ class randomPeople {
         console.log("and this is how i say hello to you");
     }
 
+ 
+
 }
 
 class personData extends randomPeople {
@@ -560,6 +563,7 @@ class personData extends randomPeople {
         //super es un metodo que manda a llamar el constructor de la clase padre.
         super(name,gender)
         this.id = id;
+        this.edad = null;
 
     }
 
@@ -567,7 +571,24 @@ class personData extends randomPeople {
         console.log("Me gusta la buena musica");
     }
 
+    static gustos(){
+        console.log("Me gusta escuchar rock y quiero aprender a ser un buen programador");
+    }
+
+    //Los setters y getters son metodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase
+
+    get Edad(){
+        return this.edad;
+
+    }
+
+    set Edad(edad){
+        this.edad = edad;
+    }
+    
 }
+
+personData.gustos();
 
 const ppl1 = new personData("Tony Veliz", "Male", "18946281"),
 ppl2 = new randomPeople ("Carlos", "Male")
@@ -580,3 +601,8 @@ ppl1.salute();
 console.log(ppl2);
 ppl2.voice();
 ppl2.salute();
+personData.Edad = 30;
+console.log(personData.Edad);
+
+
+
