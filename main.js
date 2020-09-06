@@ -121,7 +121,7 @@
 // //switch - case
 // /*Domingo - 0
 // Lunes - 1
-// Martes -2 
+// Martes -2
 // Miercoles -3
 // Jueves- 4
 // Viernes - 5
@@ -171,7 +171,7 @@
 
 // }
 
-// //loops 
+// //loops
 
 // let contador = 0;
 // while (contador < 10) {
@@ -459,11 +459,11 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 //    // Metodos
 //     this.sonar = function () {
 //         console.log("Hago sonidos porque estoy vivo");
-     
-//     }        
+
+//     }
 //     this.saludar = function () {
 //         console.log(`Hola me llamo ${this.nombre}`);
-   
+
 //     }
 // }
 
@@ -491,11 +491,11 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 // Metodos agregados al prototipo de la funcion constructora.
 //     Animal.prototype.sonar = function () {
 //         console.log("Hago sonidos porque estoy vivo");
-     
-//     }        
+
+//     }
 //     Animal.prototype.saludar = function () {
 //         console.log(`Hola me llamo ${this.nombre}`);
-   
+
 //     }
 
 //     Herencia Prototipal
@@ -512,12 +512,12 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 //     Sobreescritura dele prototipo padre en hijo;
 //     Perro.prototype.sonar = function () {
 //         console.log("Soy un perro y ladro");
-        
+
 //     }
 
 //     Perro.prototype.ladrar = function () {
 //         console.log("Guau Guau x3");
-        
+
 //     }
 
 
@@ -535,74 +535,96 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 // lolaBunny.sonar();
 // lolaBunny.saludar();
 
-class randomPeople {
-    constructor(name,gender) {
-        this.name = name;
-        this.gender = gender;
-        
-       
-    }
-
-    //methods
-
-    voice() {
-        console.log("hello,this is my voice");
-
-    }
-
-    salute(){
-        console.log("and this is how i say hello to you");
-    }
-
- 
-
-}
-
-class personData extends randomPeople {
-    constructor(name,gender,id){
-        //super es un metodo que manda a llamar el constructor de la clase padre.
-        super(name,gender)
-        this.id = id;
-        this.edad = null;
-
-    }
-
-    likes(){
-        console.log("Me gusta la buena musica");
-    }
-
-    static gustos(){
-        console.log("Me gusta escuchar rock y quiero aprender a ser un buen programador");
-    }
-
-    //Los setters y getters son metodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase
-
-    get Edad(){
-        return this.edad;
-
-    }
-
-    set Edad(edad){
-        this.edad = edad;
-    }
-    
-}
-
-personData.gustos();
-
-const ppl1 = new personData("Tony Veliz", "Male", "18946281"),
-ppl2 = new randomPeople ("Carlos", "Male")
+// class randomPeople {
+//     constructor(name,gender) {
+//         this.name = name;
+//         this.gender = gender;
 
 
-console.log(ppl1);
-ppl1.voice();
-ppl1.salute();
+//     }
 
-console.log(ppl2);
-ppl2.voice();
-ppl2.salute();
-personData.Edad = 30;
-console.log(personData.Edad);
+//     //methods
+
+//     voice() {
+//         console.log("hello,this is my voice");
+
+//     }
+
+//     salute(){
+//         console.log("and this is how i say hello to you");
+//     }
 
 
+
+// }
+
+// class personData extends randomPeople {
+//     constructor(name,gender,id){
+//         //super es un metodo que manda a llamar el constructor de la clase padre.
+//         super(name,gender)
+//         this.id = id;
+//         this.edad = null;
+
+//     }
+
+//     likes(){
+//         console.log("Me gusta la buena musica");
+//     }
+
+//     static gustos(){
+//         console.log("Me gusta escuchar rock y quiero aprender a ser un buen programador");
+//     }
+
+//     //Los setters y getters son metodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase
+
+//     get Edad(){
+//         return this.edad;
+
+//     }
+
+//     set Edad(edad){
+//         this.edad = edad;
+//     }
+
+// }
+
+// personData.gustos();
+
+// const ppl1 = new personData("Tony Veliz", "Male", "18946281"),
+// ppl2 = new randomPeople ("Carlos", "Male")
+
+
+// console.log(ppl1);
+// ppl1.voice();
+// ppl1.salute();
+
+// console.log(ppl2);
+// ppl2.voice();
+// ppl2.salute();
+// personData.Edad = 30;
+// console.log(personData.Edad);
+
+//Objeto Console
+
+console.log(console);
+console.error("Esto es un Error");
+console.warn("Esto es un Aviso");
+console.info("Esto es un mensaje informativo")
+console.log("Log es como un registro de lo que ha sucedido en nuestra aplicacion")
+
+let nombre = "Tony",
+    apellido = "Veliz",
+    edad = 30;
+
+    console.log(nombre);
+    console.log(apellido);
+    console.log(edad);
+
+    console.log(nombre,apellido,edad);
+    console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años. `);
+    console.log(`Hola mi nombre es %s %s y tengo %d años.`, nombre,apellido,edad);
+
+
+
+            
 
