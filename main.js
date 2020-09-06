@@ -623,8 +623,9 @@ let nombre = "Tony",
     console.log(nombre,apellido,edad);
     console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años. `);
     console.log(`Hola mi nombre es %s %s y tengo %d años.`, nombre,apellido,edad);
+    
+    console.clear();
 
 
 
-            
 
