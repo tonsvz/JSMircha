@@ -709,3 +709,25 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 
 
 // console.clear();
+
+
+//Objeto MATH
+console.log(Math); //objeto Math
+console.log(Math.PI);//Valor de PI
+console.log(Math.abs(7.8)); // valor absoluto
+console.log(Math.ceil(7.8));//Redondea el numero a entero mayor.
+console.log(Math.floor(7.2));//Redondea  el numero a entero menor
+console.log(Math.round(7.5)); // Clasica manera de redondear, apartir de 0.5 se considera el siguiente numero
+console.log(Math.sqrt(81));//Raiz Cuadrada
+console.log(Math.pow(2,5));//Potencias (el primer numero es la base, el segundo el exponente)
+console.log(Math.random()); // Crea un numero aleatorio entre 0 y 1
+console.log(Math.random() * 1000);//le indica que el numero aleatorio se comprende entre 0 y 1000
+console.log(Math.round(Math.random() * 1000));//Redondea el numero entre 0 y 1000
+
+
+/* Cortocircuito OR - Cuando el valor de la izquierda en la expresion siempre pueda validar a true, es el valor que se cargara por defecto
+
+Caso Contrario
+
+ Cortocircuito AND - Cuando el valor de la izquierda en la expresion siempre pueda valirdar la fase, es el valor que se cargara por defecto*/
+
