@@ -606,82 +606,106 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 
 //Objeto Console
 
-console.log(console);
-console.error("Esto es un Error");
-console.warn("Esto es un Aviso");
-console.info("Esto es un mensaje informativo")
-console.log("Log es como un registro de lo que ha sucedido en nuestra aplicacion")
+// console.log(console);
+// console.error("Esto es un Error");
+// console.warn("Esto es un Aviso");
+// console.info("Esto es un mensaje informativo")
+// console.log("Log es como un registro de lo que ha sucedido en nuestra aplicacion")
 
-let nombre = "Tony",
-    apellido = "Veliz",
-    edad = 30;
+// let nombre = "Tony",
+//     apellido = "Veliz",
+//     edad = 30;
 
-console.log(nombre);
-console.log(apellido);
-console.log(edad);
+// console.log(nombre);
+// console.log(apellido);
+// console.log(edad);
 
-console.log(nombre, apellido, edad);
-console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años. `);
-console.log(`Hola mi nombre es %s %s y tengo %d años.`, nombre, apellido, edad);
+// console.log(nombre, apellido, edad);
+// console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años. `);
+// console.log(`Hola mi nombre es %s %s y tengo %d años.`, nombre, apellido, edad);
 
-console.clear(); //<-- Limpia la consola por completo
+// console.clear(); //<-- Limpia la consola por completo
 
-console.log(window);
-console.log(document); //<= Document es la representacion del documento HTML a traves de JS.
-console.dir(document)
-console.dir(document)
-console.clear();
-console.group("Cursos de @Jonmircha en Youtube");
-console.log("Curso de JavaScript");
-console.log("Curso de NodeJS");
-console.log("Curso de Flexbox");
-console.groupEnd();
+// console.log(window);
+// console.log(document); //<= Document es la representacion del documento HTML a traves de JS.
+// console.dir(document)
+// console.dir(document)
+// console.clear();
+// console.group("Cursos de @Jonmircha en Youtube");
+// console.log("Curso de JavaScript");
+// console.log("Curso de NodeJS");
+// console.log("Curso de Flexbox");
+// console.groupEnd();
 
-console.log(console);
-console.table(Object.entries(console).sort()) //<= Muestra una tabla y array con los elementos de la consola, la propiedad .sort ordena de manera alfabetica los elementos de la consola.
+// console.log(console);
+// console.table(Object.entries(console).sort()) //<= Muestra una tabla y array con los elementos de la consola, la propiedad .sort ordena de manera alfabetica los elementos de la consola.
 
-const numeros = [1, 2, 3, 4, 5, 0],
-    vocales = ["a", "e", "i", "o", "u"];
+// const numeros = [1, 2, 3, 4, 5, 0],
+//     vocales = ["a", "e", "i", "o", "u"];
 
-console.table(Object.entries(numeros));
-console.table(Object.entries(vocales));
+// console.table(Object.entries(numeros));
+// console.table(Object.entries(vocales));
 
-const persona = {
-    name: "Tony",
-    lastname: "Veliz",
-    age: 30
-}
-console.table(persona)
-console.clear();
+// const persona = {
+//     name: "Tony",
+//     lastname: "Veliz",
+//     age: 30
+// }
+// console.table(persona)
+// console.clear();
 
-console.time("Cuanto tiempo tarda mi code?") //<= saber cuanto demora en ejecutarse un bloque de codigo
+// console.time("Cuanto tiempo tarda mi code?") //<= saber cuanto demora en ejecutarse un bloque de codigo
 
-const arreglo = Array(100000);
-for (let i = 0; i < arreglo.length; i++) {
-    arreglo[i] = i;
+// const arreglo = Array(100000);
+// for (let i = 0; i < arreglo.length; i++) {
+//     arreglo[i] = i;
 
-}
+// }
 
-console.timeEnd("Cuanto tiempo tarda mi code?");//<= saber cuanto demora en ejecutarse un bloque de codigo
-// console.log(arreglo)
+// console.timeEnd("Cuanto tiempo tarda mi code?");//<= saber cuanto demora en ejecutarse un bloque de codigo
+// // console.log(arreglo)
 
-console.clear();
-//contador de iteraciones
-for (let i = 0; i <= 100; i++) {
-    console.count("Codigo for")
-    console.log(i);
+// console.clear();
+// //contador de iteraciones
+// for (let i = 0; i <= 100; i++) {
+//     console.count("Codigo for")
+//     console.log(i);
 
-}
-console.clear()
+// }
+// console.clear()
 
-let x = 1, 
-y = 2,
-testXY = "Se espera que X siempre sea menor que Y";
+// let x = 1, 
+// y = 2,
+// testXY = "Se espera que X siempre sea menor que Y";
 
-console.assert(x<y,{x,y,testXY});
+// console.assert(x<y,{x,y,testXY});
 
-//<= Assert hace una comparacion y como se nota aca, si es correcto no lanzara error, si la condicion X es mayor a Y assert lanzara un error porque no se cumple la condicion de "Se espera que X sea menor que Y"
+// //<= Assert hace una comparacion y como se nota aca, si es correcto no lanzara error, si la condicion X es mayor a Y assert lanzara un error porque no se cumple la condicion de "Se espera que X sea menor que Y"
 
-//Objeto date
+// //Objeto date
 
-console.clear
+// console.clear
+
+// console.log(Date());
+// let fecha = new Date();
+// console.log(fecha);//
+// //dia del mes
+// console.log(fecha.getDate());
+// //dia de la semana D L M M J V S => 0 1 2 3 4 5 6
+// console.log(fecha.getDay());
+// //mes Jan Feb Mar Abr May Jun Jul Aug Sep Oct Nov Dec => 0 1 2 3 4 5 6 7 8 9 10 11
+// console.log(fecha.getMonth());
+// //Año
+// console.log(fecha.getFullYear());// Desde el Y2K el metodo getYear esta deprecated, usar getFullYear
+// //Este metodo representa 120 (si estamos en el 2020) porque cuenta desde el año 1900 hasta el año actual.
+// console.log(fecha.getYear());
+
+// console.log(fecha.getHours());
+// console.log(fecha.getMinutes()); 
+// console.log(fecha.getSeconds());
+// console.log(fecha.toString());
+// console.log(fecha.toDateString());
+// console.log(fecha.toLocaleString());
+
+
+// console.clear();
