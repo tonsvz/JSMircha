@@ -616,16 +616,72 @@ let nombre = "Tony",
     apellido = "Veliz",
     edad = 30;
 
-    console.log(nombre);
-    console.log(apellido);
-    console.log(edad);
+console.log(nombre);
+console.log(apellido);
+console.log(edad);
 
-    console.log(nombre,apellido,edad);
-    console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años. `);
-    console.log(`Hola mi nombre es %s %s y tengo %d años.`, nombre,apellido,edad);
-    
-    console.clear();
+console.log(nombre, apellido, edad);
+console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años. `);
+console.log(`Hola mi nombre es %s %s y tengo %d años.`, nombre, apellido, edad);
 
+console.clear(); //<-- Limpia la consola por completo
 
+console.log(window);
+console.log(document); //<= Document es la representacion del documento HTML a traves de JS.
+console.dir(document)
+console.dir(document)
+console.clear();
+console.group("Cursos de @Jonmircha en Youtube");
+console.log("Curso de JavaScript");
+console.log("Curso de NodeJS");
+console.log("Curso de Flexbox");
+console.groupEnd();
 
+console.log(console);
+console.table(Object.entries(console).sort()) //<= Muestra una tabla y array con los elementos de la consola, la propiedad .sort ordena de manera alfabetica los elementos de la consola.
 
+const numeros = [1, 2, 3, 4, 5, 0],
+    vocales = ["a", "e", "i", "o", "u"];
+
+console.table(Object.entries(numeros));
+console.table(Object.entries(vocales));
+
+const persona = {
+    name: "Tony",
+    lastname: "Veliz",
+    age: 30
+}
+console.table(persona)
+console.clear();
+
+console.time("Cuanto tiempo tarda mi code?") //<= saber cuanto demora en ejecutarse un bloque de codigo
+
+const arreglo = Array(100000);
+for (let i = 0; i < arreglo.length; i++) {
+    arreglo[i] = i;
+
+}
+
+console.timeEnd("Cuanto tiempo tarda mi code?");//<= saber cuanto demora en ejecutarse un bloque de codigo
+// console.log(arreglo)
+
+console.clear();
+//contador de iteraciones
+for (let i = 0; i <= 100; i++) {
+    console.count("Codigo for")
+    console.log(i);
+
+}
+console.clear()
+
+let x = 1, 
+y = 2,
+testXY = "Se espera que X siempre sea menor que Y";
+
+console.assert(x<y,{x,y,testXY});
+
+//<= Assert hace una comparacion y como se nota aca, si es correcto no lanzara error, si la condicion X es mayor a Y assert lanzara un error porque no se cumple la condicion de "Se espera que X sea menor que Y"
+
+//Objeto date
+
+console.clear
