@@ -711,7 +711,7 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 // console.clear();
 
 
-//Objeto MATH
+// //Objeto MATH
 // console.log(Math); //objeto Math
 // console.log(Math.PI);//Valor de PI
 // console.log(Math.abs(7.8)); // valor absoluto
@@ -743,5 +743,19 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 // saludar();
 // console.log(true && false);
 
+// console.clear();
 
-// alerts, confirms y prompts.
+// //alerts, confirms y prompts.
+// //alert("This is an alert.");
+// //confirm("This is a confirmation.");
+// //prompt("This is a prompt");
+
+// let alerta = alert("This is an alert"),
+// confirmacion = confirm("This is a confirmation"),
+// aviso = prompt("This is a prompt");
+
+// console.log(alerta);
+// console.log(confirmacion);
+// console.log(aviso);
+
+//Expresiones Regulares 
