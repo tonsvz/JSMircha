@@ -735,7 +735,7 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 // function saludar(nombre) {
 //     nombre = nombre && "Desconocido"
 //     console.log(`Hola ${nombre}`);
-      
+
 // }
 
 // console.log();
@@ -759,3 +759,68 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 // console.log(aviso);
 
 //Expresiones Regulares 
+
+/*Documentacion:
+https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+
+https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular#Construcci%C3%B3n_de_una_expresi%C3%B3n_regular
+*/
+// let cadena = "Lorem ipsum dolor sit sit amet consectetur adipisicing elit. Provident minima sint ipsam corrupti magnam omnis reprehenderit. lorem lorem Fuga lorem rem ratione assumenda! Soluta officiis ut repellendus delectus, recusandae namarchitecto lorem amet explicabo65?"
+
+// // let expReg = new RegExp("lorem","ig");
+
+// // console.log(expReg.test(cadena))
+// // console.log(expReg.exec(cadena))
+
+// let expReg2 = /lorem{1}/ig;
+// console.log(expReg2.test(cadena));
+// console.log(expReg2.exec(cadena));
+// console.clear();
+
+// //Funciones anonimas autoejecutables. IIFE (Inmediate Invoke Function Express)
+
+// (function () {
+//     console.log("Mi primer IIFE");
+// })();
+
+// (function (d, w, c) {
+//     console.log("Mi segunda IIFE");
+//     console.log(d);
+//     console.log(w);
+//     console.log(c);
+//     c.log("Este es un console.log resumido")
+
+// })(document, window, console);
+
+
+// /*Distintos tipos de funciones anonimas*/
+// //Clasica
+// (function () {
+//     console.log("Versión Clasica");
+// })();
+
+// // Douglas Crockford (JavaScript The Good Parts => Buscar Libro)
+
+// ((function () {
+//     console.log("Version Crockford")
+// })());
+
+// //Unaria
+// +
+// function () {
+//     console.log("Version Unaria");
+
+// }();
+
+// //Version Facebook
+// ! function () {
+//     console.log("Version Facebook");
+// }();
+
+// console.clear();
+
+// Modulos (Import / Export);
+
+
+
+
