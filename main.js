@@ -777,7 +777,7 @@ https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular#Construcci%C3%B3n_de_una_ex
 // console.log(expReg2.exec(cadena));
 // console.clear();
 
-// //Funciones anonimas autoejecutables. IIFE (Inmediate Invoke Function Express)
+//Funciones anonimas autoejecutables. IIFE (Inmediate Invoke Function Express)
 
 // (function () {
 //     console.log("Mi primer IIFE");
@@ -806,8 +806,7 @@ https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular#Construcci%C3%B3n_de_una_ex
 // })());
 
 // //Unaria
-// +
-// function () {
+// +function () {
 //     console.log("Version Unaria");
 
 // }();
@@ -819,7 +818,7 @@ https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular#Construcci%C3%B3n_de_una_ex
 
 // console.clear();
 
-// Modulos (Import / Export);
+
 
 
 
