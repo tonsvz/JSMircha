@@ -1,0 +1,1 @@
+console.log("Mi Browser no soporta Modulo +ES6");
