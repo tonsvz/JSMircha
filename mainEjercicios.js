@@ -11,9 +11,9 @@ button1.addEventListener("click", () => {
 
 button2.addEventListener("click", () => {
     alert("Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion (Hola Mundo, 4) devolverá: Hola")
-    let string = prompt("Inserte un texto a evaluar");
+    let str = prompt("Inserte un texto a evaluar");
     let cropText = prompt("Ingrese cantidad de caracteres a recortar")
-    ex02(string,cropText)
+    ex02(str, cropText)
 
 })
 button3.addEventListener("click", () => {
@@ -29,8 +29,8 @@ button4.addEventListener("click", () => {
 //funciones a ejecutar
 //Ejercicio 01
 
-const ex01 = (string)=>{
-    if (typeof string !="string") {
+const ex01 = (string) => {
+    if (typeof string != "string") {
         alert("Ingrese un valor con caracteres para ser evaluado")
     } else {
         alert(`El numero de caracteres que contiene el valor ingresado es ${string.length}.`)
@@ -39,19 +39,17 @@ const ex01 = (string)=>{
 
 //Ejercicio 02
 
-const ex02 = (string, cropText)=> {
-    
-        if(typeof string != 'string') {
-            alert('Es necesario una cadena de texto');
-        } else {
-            cropText = cropText * 1;
-            if(cropText && typeof cropText === 'number') {
-                return alert(`El resultado del texto recortado es: ${string.substr(1,cropText)}`);
-            } else {
-                alert(`Necesitas un número valido o que no sea 0`);
-            }
-        }
-    
-}
+const ex02 = (str, cropText) => {
 
-//Revisar urgentemente la documentacion de MDN Dev Network acerca de String.substr para entender su funcionamiento.
+    if (typeof str != "string"){
+
+        alert("Es necesaria una cadena de texto")
+    }else{
+        cropText = cropText * 1
+        if (cropText != "number") {
+            return alert (`El resultado recortado es ${str.substr(0,cropText)}`)
+        }
+    }
+
+    }
+        //Revisar urgentemente la documentacion de MDN Dev Network acerca de String.substr para entender su funcionamiento.       if (typeof str != 'string') {
