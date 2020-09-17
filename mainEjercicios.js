@@ -18,12 +18,14 @@ button2.addEventListener("click", () => {
 })
 button3.addEventListener("click", () => {
     alert("Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal']")
-    let string = prompt("Inserte un texto a evaluar")
-    let separador = prompt("Ingrese la cantidad de separadores")
+    let textToArray = prompt("Inserte un texto a evaluar")
+    ex03(textToArray)
 })
 button4.addEventListener("click", () => {
     alert("Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.")
-    prompt("Insere un texto a evaluar")
+    let redo = prompt("Insere un texto a evaluar")
+    let counter = prompt("Ingrese la cantidad de veces a repetir")
+    ex04(redo, counter)
 })
 
 //funciones a ejecutar
@@ -40,16 +42,30 @@ const ex01 = (string) => {
 //Ejercicio 02
 
 const ex02 = (str, cropText) => {
+    cropText = cropText * 1
+    alert(`El resultado recortado es ${str.substr(0,cropText)}`)
 
-    if (typeof str != "string"){
 
-        alert("Es necesaria una cadena de texto")
-    }else{
-        cropText = cropText * 1
-        if (cropText != "number") {
-            return alert (`El resultado recortado es ${str.substr(0,cropText)}`)
-        }
-    }
+}
 
-    }
-        //Revisar urgentemente la documentacion de MDN Dev Network acerca de String.substr para entender su funcionamiento.       if (typeof str != 'string') {
+//Ejercicio 03
+
+
+const ex03 = (textToArray) => {
+    result = textToArray.split(" ");
+    console.log(result);
+    return alert('Mira por consola el arreglo devuelto');
+}
+//Revisar urgentemente la documentacion de MDN Dev Network acerca de String.substr para entender su funcionamiento.       if (typeof str != 'string') {
+
+//Ejercicio 04
+
+
+const ex04 = (redo, counter) => {
+    repeticion = redo.repeat(counter)
+    alert(`Este es el texto repetido: ${repeticion}`)
+
+    
+}
+
+
