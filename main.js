@@ -313,8 +313,8 @@
 // console.log(one, two, three);
 
 // ////////////////////////////////////
-// let person = {
-//     name: "tony",
+// const person = {
+//     name: "tony", 
 //     lastname: "veliz",
 //     age: 35
 // }
@@ -323,6 +323,7 @@
 //     lastname,
 //     age
 // } = person;
+
 // console.log(name, lastname, age);
 // ////////////////////////////////////////
 
@@ -799,7 +800,7 @@ https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular#Construcci%C3%B3n_de_una_ex
 //     console.log("Versión Clasica");
 // })();
 
-// // Douglas Crockford (JavaScript The Good Parts => Buscar Libro)
+// Douglas Crockford (JavaScript The Good Parts => Buscar Libro)
 
 // ((function () {
 //     console.log("Version Crockford")
