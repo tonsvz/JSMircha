@@ -327,38 +327,38 @@
 // console.log(name, lastname, age);
 // ////////////////////////////////////////
 
-// //Objetos literales, EC6
-// let nombrePerro = "Oslo",
-//     edadPerro = 2;
+//Objetos literales, EC6
+let nombrePerro = "Oslo",
+    edadPerro = 2;
 
-// const dog = {
-//     nombrePerro,
-//     edadPerro,
-//     raza: "callejero",
-//     ladrar() {
-//         console.log("guaaau guaaau guaaaau!")
-//     },
-//     color: "blanco"
-// }
+const dog = {
+    nombrePerro,
+    edadPerro,
+    raza: "callejero",
+    ladrar() {
+        console.log("guaaau guaaau guaaaau!")
+    },
+    color: "blanco"
+}
 
-// console.log(dog)
-// dog.ladrar();
+console.log(dog)
+dog.ladrar();
 
-// // Parametros REST
+// Parametros REST
 
-// function sumar(a, b, ...c) {
-//     let result = a + b;
-//     c.forEach(function (n) {
-//         result += n
+function sumar(a, b, ...c) {
+    let result = a + b;
+    c.forEach(function (n) {
+        result += n
 
-//     });
+    });
 
-//     return result;
-// }
-// console.log(sumar(1, 2));
-// console.log(sumar(1, 2, 3, 4));
-// console.log(sumar(1, 2, 4, 5));
-// console.log(sumar(1, 2, 3, 4, 5));
+    return result;
+}
+console.log(sumar(1, 2));
+console.log(sumar(1, 2, 3, 4));
+console.log(sumar(1, 2, 4, 5));
+console.log(sumar(1, 2, 3, 4, 5));
 
 
 // //Operadores Spread
