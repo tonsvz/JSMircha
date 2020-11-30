@@ -39,7 +39,7 @@ const ex01 = (string) => {
     }
 }
 
-//Ejercicio 02
+//Ejercicio 021
 
 const ex02 = (str, cropText) => {
     cropText = cropText * 1
