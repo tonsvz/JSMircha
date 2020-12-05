@@ -3,8 +3,8 @@ import saludar,{PI,Saludar,user}from "./constantes.js"
 import {aritmetica as calculus} from "./aritmetica.js" // -as- permite asignar un alias al modulo a llamar.
 console.log("Archivo Modulo.js");
 
-console.log(PI,user);
-console.log(calculus.sumar(3,5));
-saludar();
-let saludo = new Saludar();
-saludo;
+// console.log(PI,user);
+// console.log(calculus.sumar(3,5));
+// saludar();
+// let saludo = new Saludar();
+// saludo;

@@ -328,40 +328,54 @@
 // ////////////////////////////////////////
 
 //Objetos literales, EC6
-let nombrePerro = "Oslo",
-    edadPerro = 2;
+// let nombrePerro = "Oslo",
+//     edadPerro = 2;
 
-const dog = {
-    nombrePerro,
-    edadPerro,
-    raza: "callejero",
-    ladrar() {
-        console.log("guaaau guaaau guaaaau!")
-    },
-    color: "blanco"
-}
+// const dog = {
+//     nombrePerro,
+//     edadPerro,
+//     raza: "callejero",
+//     ladrar() {
+//         console.log("guaaau guaaau guaaaau!")
+//     },
+//     color: "blanco"
+// }
 
-console.log(dog)
-dog.ladrar();
+// console.log(dog)
+// dog.ladrar();
 
 // Parametros REST
 
-function sumar(a, b, ...c) {
-    let result = a + b;
-    c.forEach(function (n) {
-        result += n
+// function sumar(a, b, ...c) {
+//     let result = a + b;
+//     c.forEach(function (n) {
+//         result += n
 
-    });
+//     });
 
-    return result;
-}
-console.log(sumar(1, 2));
-console.log(sumar(1, 2, 3, 4));
-console.log(sumar(1, 2, 4, 5));
-console.log(sumar(1, 2, 3, 4, 5));
+//     return result;
+// }
+// console.log(sumar(1, 2));
+// console.log(sumar(1, 2, 3, 4));
+// console.log(sumar(1, 2, 4, 5));
+// console.log(sumar(1, 2, 3, 4, 5));
 
+// function myFun(a, b, ...masArgumentos) {
+//     console.log("a", a); 
+//     console.log("b", b);
+//     console.log("masArgumentos", masArgumentos); 
+// }
 
-// //Operadores Spread
+// myFun("one", "two", "three", "four", "five", "six");
+
+// Console Output:
+// a, one
+// b, two
+// masArgumentos, [three, four, five, six]
+
+//el objeto arguments no es un array real, mientras que los parámetros rest son instancias de  Array , lo que significa que lo los métodos como sort, map, forEach o pop pueden aplicarse directamente; 
+
+//Operadores Spread
 
 // const arr1 = [1, 2, 3, 4, 5],
 //     arr2 = [5, 6, 7, 8, 9];
@@ -372,18 +386,18 @@ console.log(sumar(1, 2, 3, 4, 5));
 // const arr4 = [...arr1, ...arr2] // => con este operador (...) unimos los 2 arreglos citados y formamos 1 arreglo con los elementos de los 2 anteriores (1) [1,2,3,4,5,6,7,8,9,0]
 // console.log(arr3);
 // console.log(arr4);
+// console.log("Esto es un arreglo de" + " " + arr4.length + " posiciones.");
 
-// //... nos permite unir 2 o 3 arreglos a uno solo.
+//... nos permite unir 2 o 3 arreglos a uno solo.
 
 
-// //arrow functions ()=>{}
+//arrow functions ()=>{}
 
-// //Diferencias
-// //Cuando una funcion flecha no recibe parametros es obligatorio el uso de las llaves {}
-// const salute1 = () => {
-//     console.log("Hola Tony1");
-// }
-// salute1()
+//Diferencias
+//Cuando una funcion arrow no recibe parametros es obligatorio el uso de las llaves {}
+
+// const sumatoria = (c,d) => c+d;
+// console.log(sumatoria(20,20));
 
 // //cuando una funcion flecha recibe parametros puede ejecutarse sin el parentesis () de los parametros y sin las llaves {}
 // const salute = name => console.log(`Hola ${name}`);
@@ -396,6 +410,7 @@ console.log(sumar(1, 2, 3, 4, 5));
 // console.log(add1(3, 3), "using normal function"); //Manera clasica de declarar funciones
 
 // const add = (a, b) => a + b;
+
 // console.log(add(2, 3), "using arrow function () =>  "); // Manera usando Arrow Functions, () Los parentesis de parametros solo se omiten si se ingresa 1 solo parametro, mas de 1 necesitara usarse parentesis, pero pueden seguir omitiendose las llaves {}.
 
 // const variousLettersFunction = () => { // Con mas de 3 lineas de comando se necesitara usar {} obligatoriamente.
@@ -407,7 +422,8 @@ console.log(sumar(1, 2, 3, 4, 5));
 // variousLettersFunction();
 
 // const numberArray = [0, 1, 2, 3, 4]
-// numberArray.forEach((el, index) => console.log(`El elemento ${el} esta en la posicion ${index}`));
+// numberArray.forEach((el, ind) =>
+//  console.log(`El elemento ${el} esta en la posicion ${ind}`));
 
 // const perro = {
 //     name: "Oslo",
