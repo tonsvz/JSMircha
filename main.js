@@ -344,51 +344,51 @@
 // console.log(dog)
 // dog.ladrar();
 
-// Parametros REST
+// // Parametros REST
 
-// function sumar(a, b, ...c) {
-//     let result = a + b;
-//     c.forEach(function (n) {
-//         result += n
+function sumar(a, b, ...c) {
+    let result = a + b;
+    c.forEach(function (n) {
+        result += n
 
-//     });
+    });
 
-//     return result;
-// }
-// console.log(sumar(1, 2));
-// console.log(sumar(1, 2, 3, 4));
-// console.log(sumar(1, 2, 4, 5));
-// console.log(sumar(1, 2, 3, 4, 5));
+    return result;
+}
+console.log(sumar(1, 2));
+console.log(sumar(1, 2, 3, 4));
+console.log(sumar(1, 2, 4, 5));
+console.log(sumar(1, 2, 3, 4, 5));
 
-// function myFun(a, b, ...masArgumentos) {
-//     console.log("a", a); 
-//     console.log("b", b);
-//     console.log("masArgumentos", masArgumentos); 
-// }
+function myFun(a, b, ...masArgumentos) {
+    console.log("a", a); 
+    console.log("b", b);
+    console.log("masArgumentos", masArgumentos); 
+}
 
-// myFun("one", "two", "three", "four", "five", "six");
+myFun("one", "two", "three", "four", "five", "six");
 
-// Console Output:
-// a, one
-// b, two
-// masArgumentos, [three, four, five, six]
+// // Console Output:
+// // a, one
+// // b, two
+// // masArgumentos, [three, four, five, six]
 
-//el objeto arguments no es un array real, mientras que los parámetros rest son instancias de  Array , lo que significa que lo los métodos como sort, map, forEach o pop pueden aplicarse directamente; 
+// // el objeto arguments no es un array real, mientras que los parámetros rest son instancias de  Array , lo que significa que lo los métodos como sort, map, forEach o pop pueden aplicarse directamente; 
 
-//Operadores Spread
+// // Operadores Spread
 
-// const arr1 = [1, 2, 3, 4, 5],
-//     arr2 = [5, 6, 7, 8, 9];
+const arr1 = [1, 2, 3, 4, 5],
+    arr2 = [5, 6, 7, 8, 9];
 
 
-// console.log(arr1, arr2);
-// const arr3 = [arr1, arr2] //=> crea 1 arreglo de 2 posiciones, es decir 2 arreglos internos (2)([1,2,3,4,5], [6,7,8,9,0])
-// const arr4 = [...arr1, ...arr2] // => con este operador (...) unimos los 2 arreglos citados y formamos 1 arreglo con los elementos de los 2 anteriores (1) [1,2,3,4,5,6,7,8,9,0]
-// console.log(arr3);
-// console.log(arr4);
-// console.log("Esto es un arreglo de" + " " + arr4.length + " posiciones.");
+console.log(arr1, arr2);
+const arr3 = [arr1, arr2] //=> crea 1 arreglo de 2 posiciones, es decir 2 arreglos internos (2)([1,2,3,4,5], [6,7,8,9,0])
+const arr4 = [...arr1, ...arr2] // => con este operador (...) unimos los 2 arreglos citados y formamos 1 arreglo con los elementos de los 2 anteriores (1) [1,2,3,4,5,6,7,8,9,0]
+console.log(arr3);
+console.log(arr4);
+console.log("Esto es un arreglo de" + " " + arr4.length + " posiciones.");
 
-//... nos permite unir 2 o 3 arreglos a uno solo.
+// // ... nos permite unir 2 o 3 arreglos a uno solo.
 
 
 //arrow functions ()=>{}
@@ -396,8 +396,9 @@
 //Diferencias
 //Cuando una funcion arrow no recibe parametros es obligatorio el uso de las llaves {}
 
-// const sumatoria = (c,d) => c+d;
-// console.log(sumatoria(20,20));
+// const sumatoria = (c, d) =>
+//     c + d;
+// console.log(sumatoria(20, 20));
 
 // //cuando una funcion flecha recibe parametros puede ejecutarse sin el parentesis () de los parametros y sin las llaves {}
 // const salute = name => console.log(`Hola ${name}`);
@@ -436,7 +437,7 @@
 
 //las arrow function tienen la capacidad de saltar el contexto en el que se encuentran (en este caso el objeto) y heredar o reconocer el contexto en donde se encuentra su objeto padre donde ha sido declarado.
 
-//Protoipos
+//Prototipos
 
 //POO => Acronimo de Programacion Orientada a Objetos
 /*
