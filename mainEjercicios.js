@@ -2,6 +2,7 @@ const button1 = document.querySelector(".btn1")
 const button2 = document.querySelector(".btn2")
 const button3 = document.querySelector(".btn3")
 const button4 = document.querySelector(".btn4")
+//Botones con su querySelector.
 
 button1.addEventListener("click", () => {
     alert("Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion (Hola Mundo) devolverá 10.")
