@@ -26,7 +26,7 @@
 // const tony = {
 //     pasatiempo: "jugar, programar",
 //     nombre: "Tony",
-//     apellido: "veliz",
+//     apellido: "Veliz",
 //     edad: 30,
 //     sayname: function () {
 //         console.log(`Mi nombre es ${this.nombre}`);
