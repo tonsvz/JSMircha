@@ -515,146 +515,124 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 
 //     }
 
-    // const snoopy = new Animal("Snoopy", "Macho"),
-    // lolaBunny = new Animal("Lola Bunny", "Hembra")
+// const snoopy = new Animal("Snoopy", "Macho"),
+// lolaBunny = new Animal("Lola Bunny", "Hembra")
 
-    // console.log(snoopy);
-    // console.log(lolaBunny);
+// console.log(snoopy);
+// console.log(lolaBunny);
 
-    // snoopy.sonar();
-    // snoopy.saludar();
+// snoopy.sonar();
+// snoopy.saludar();
 
-    // lolaBunny.sonar();
-    // lolaBunny.saludar();
+// lolaBunny.sonar();
+// lolaBunny.saludar();
 
 //     Herencia Prototipal
-    // function Perro(nombre, genero, size) {
-    //     this.super= Animal;
-    //     this.super(nombre,genero);
-    //     this.tamanio = size;
-    // }
-
-    
-    // // //     Perro esta heredando  de Animal
-    //     Perro.prototype = new Animal();
-    //     Perro.prototype.constructor = Perro;
-    
-    // //   Sobreescritura del prototipo padre en hijo;
-    //     Perro.prototype.sonar = function () {
-    //             console.log("Soy un perro y ladro");
-        
-    //         }
-        
-    //         Perro.prototype.ladrar = function () {
-    //                 console.log("Guau Guau x3");
-            
-    //             }
-            
-            
-            
-    //         const snoopy = new Perro("Snoopy", "Macho", "Mediano"),
-    //         lolaBunny = new Animal("Lola Bunny", "Hembra")
-            
-    //         console.log(snoopy);
-    //         console.log(lolaBunny);
-
-
-    //         snoopy.sonar();
-    //         snoopy.saludar();
-    //         snoopy.ladrar();
-            
-    //         lolaBunny.sonar();
-    //         lolaBunny.saludar();
-            
-            //     // //practica rapida de this
-            // let callingThis = ()=> {
-            //     console.log(this);
-            // }
-            
-            // callingThis();
-            // // Si llamamos a this desde una funcion u otro lugar, llamara al objeto global, es decir al objeto window, no obstante si lo llamamos desde un objeto, este sera su objeto global y podra llamar a las caracteristicas del objeto en el que se esta llamando, ver siguiente ejemplo:
-            // let whereIsThis = {
-            //     nombre: "tony",
-            //     nickname: "tonsvz",
-            
-            //     activo: function(){
-            //         this.nombre = "Antony";
-            //         console.log(this);
-            //     }
-            // }
-            
-            // console.log(whereIsThis.activo());
-            
-            // // fin practica this.
-
-// class randomPeople {
-//     constructor(name,gender) {
-//         this.name = name;
-//         this.gender = gender;
-
-
-//     }
-
-//     //methods
-
-//     voice() {
-//         console.log("hello,this is my voice");
-
-//     }
-
-//     salute(){
-//         console.log("and this is how i say hello to you");
-//     }
-
-
-
+// function Perro(nombre, genero, size) {
+//     this.super= Animal;
+//     this.super(nombre,genero);
+//     this.tamanio = size;
 // }
 
-// class personData extends randomPeople {
-//     constructor(name,gender,id){
-//         //super es un metodo que manda a llamar el constructor de la clase padre.
-//         super(name,gender)
-//         this.id = id;
-//         this.edad = null;
 
-//     }
+// // //     Perro esta heredando  de Animal
+//     Perro.prototype = new Animal();
+//     Perro.prototype.constructor = Perro;
 
-//     likes(){
-//         console.log("Me gusta la buena musica");
-//     }
+// //   Sobreescritura del prototipo padre en hijo;
+//     Perro.prototype.sonar = function () {
+//             console.log("Soy un perro y ladro");
 
-//     static gustos(){
-//         console.log("Me gusta escuchar rock y quiero aprender a ser un buen programador");
-//     }
+//         }
 
-//     //Los setters y getters son metodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase
+//         Perro.prototype.ladrar = function () {
+//                 console.log("Guau Guau x3");
 
-//     get Edad(){
-//         return this.edad;
+//             }
 
-//     }
 
-//     set Edad(edad){
-//         this.edad = edad;
-//     }
 
+//         const snoopy = new Perro("Snoopy", "Macho", "Mediano"),
+//         lolaBunny = new Animal("Lola Bunny", "Hembra")
+
+//         console.log(snoopy);
+//         console.log(lolaBunny);
+
+
+//         snoopy.sonar();
+//         snoopy.saludar();
+//         snoopy.ladrar();
+
+//         lolaBunny.sonar();
+//         lolaBunny.saludar();
+
+//     // //practica rapida de this
+// let callingThis = ()=> {
+//     console.log(this);
 // }
 
-// personData.gustos();
+// callingThis();
+// // Si llamamos a this desde una funcion u otro lugar, llamara al objeto global, es decir al objeto window, no obstante si lo llamamos desde un objeto, este sera su objeto global y podra llamar a las caracteristicas del objeto en el que se esta llamando, ver siguiente ejemplo:
+// let whereIsThis = {
+//     nombre: "tony",
+//     nickname: "tonsvz",
 
-// const ppl1 = new personData("Tony Veliz", "Male", "18946281"),
-// ppl2 = new randomPeople ("Carlos", "Male")
+//     activo: function(){
+//         this.nombre = "Antony";
+//         console.log(this);
+//     }
+// }
+
+// console.log(whereIsThis.activo());
+
+// // fin practica this.
+
+// //Inicio de Class
+
+class Animal {
+    constructor(nombre,genero){
+        this.nombre = nombre;
+        this.genero = genero;
+    }
+    //methods
+
+    saludar(){
+        console.log(`Hola me llamo ${this.nombre}`);
+
+    }
+
+    sonar(){
+            console.log("Hago sonidos  porque estoy vivo");
+    }
+}
+
+class Perro extends Animal{
+    constructor(nombre,genero,size){
+        super(nombre,genero);
+        this.tamaño = size;
+
+    }
+
+    sonar(){
+        console.log("Hago sonidos  porque estoy vivo");
+    }
+
+    ladrar(){
+        console.log("Guau Guau x3");
+    }
+}
 
 
-// console.log(ppl1);
-// ppl1.voice();
-// ppl1.salute();
+const Minnie = new Animal("Minnie Mouse", "Femenino"),
+Scooby = new Perro("Scoobie Doo", "Masculino", "Grande");
 
-// console.log(ppl2);
-// ppl2.voice();
-// ppl2.salute();
-// personData.Edad = 30;
-// console.log(personData.Edad);
+console.log(Minnie);
+console.log(Scooby);
+Minnie.saludar();
+Minnie.sonar();
+Scooby.saludar();
+Scooby.sonar();
+Scooby.ladrar();
 
 //Objeto Console
 
