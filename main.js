@@ -814,7 +814,6 @@ function Animal(nombre, genero) {
 
 /*Documentacion:
 https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
-
 https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular#Construcci%C3%B3n_de_una_expresi%C3%B3n_regular
 */
 // let cadena = "Lorem ipsum dolor sit sit amet consectetur adipisicing elit. Provident minima sint ipsam corrupti magnam omnis reprehenderit. lorem lorem Fuga lorem rem ratione assumenda! Soluta officiis ut repellendus delectus, recusandae namarchitecto lorem amet explicabo65?"
@@ -874,4 +873,4 @@ https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular#Construcci%C3%B3n_de_una_ex
 
 //windows 10 start
 //Pull
-//Prueba Fetch s
+//Prueba Fetch
