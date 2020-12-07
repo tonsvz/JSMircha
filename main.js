@@ -500,20 +500,20 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 // //Codigo Optimizado, funcion constructora donde se asisgnan los metodos al prototipo, no a la funcion como tal.
 // //Funcion Constructora Optimizada donde asignamos los metodos al prototipo y no a la funcion como tal.
 
-function Animal(nombre, genero) {
-    // // Atributos
-    this.nombre = nombre;
-    this.genero = genero;
-}
-// // Metodos agregados al prototipo de la funcion constructora.
-            Animal.prototype.sonar = function () {
-                console.log("Hago sonidos porque estoy vivo");
+// function Animal(nombre, genero) {
+//     // // Atributos
+//     this.nombre = nombre;
+//     this.genero = genero;
+// }
+// // // Metodos agregados al prototipo de la funcion constructora.
+//             Animal.prototype.sonar = function () {
+//                 console.log("Hago sonidos porque estoy vivo");
 
-            }
-    Animal.prototype.saludar = function () {
-        console.log(`Hola me llamo ${this.nombre}`);
+//             }
+//     Animal.prototype.saludar = function () {
+//         console.log(`Hola me llamo ${this.nombre}`);
 
-    }
+//     }
 
     // const snoopy = new Animal("Snoopy", "Macho"),
     // lolaBunny = new Animal("Lola Bunny", "Hembra")
