@@ -314,7 +314,7 @@
 
 // ////////////////////////////////////
 // const person = {
-//     name: "tony", 
+//     name: "tony",
 //     lastname: "veliz",
 //     age: 35
 // }
@@ -361,9 +361,9 @@
 // console.log(sumar(1, 2, 3, 4, 5));
 
 // function myFun(a, b, ...masArgumentos) {
-//     console.log("a", a); 
+//     console.log("a", a);
 //     console.log("b", b);
-//     console.log("masArgumentos", masArgumentos); 
+//     console.log("masArgumentos", masArgumentos);
 // }
 
 // myFun("one", "two", "three", "four", "five", "six");
@@ -373,7 +373,7 @@
 // b, two
 // masArgumentos, [three, four, five, six]
 
-//el objeto arguments no es un array real, mientras que los parámetros rest son instancias de  Array , lo que significa que lo los métodos como sort, map, forEach o pop pueden aplicarse directamente; 
+//el objeto arguments no es un array real, mientras que los parámetros rest son instancias de  Array , lo que significa que lo los métodos como sort, map, forEach o pop pueden aplicarse directamente;
 
 //Operadores Spread
 
@@ -436,7 +436,7 @@
 
 //las arrow function tienen la capacidad de saltar el contexto en el que se encuentran (en este caso el objeto) y heredar o reconocer el contexto en donde se encuentra su objeto padre donde ha sido declarado.
 
-//Protoipos
+//Prototipos
 
 //POO => Acronimo de Programacion Orientada a Objetos
 /*
@@ -448,7 +448,7 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 //Prototipo es un mecanismo por el cual un objeto puede heredar atributos y metodos (ahi la importancia de los conceptos mencionados ^) de un objeto padre
 
 // const animal = {
-//     name:"Rex",
+//     name:"Atreius",
 //     sound(){
 //         console.log("Hago sonidos porque estoy vivo");
 //     }
@@ -467,90 +467,125 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 
 
 
-//Funcion Constructora
+// Funcion Constructora
 
-// function Animal(nombre, genero) {
-//    // Atributos
+// function persona(nombre,genero,id){
 //     this.nombre = nombre;
 //     this.genero = genero;
-//    // Metodos
-//     this.sonar = function () {
-//         console.log("Hago sonidos porque estoy vivo");
+//     this.id = id;
 
-//     }
 //     this.saludar = function () {
-//         console.log(`Hola me llamo ${this.nombre}`);
+//         console.log(`Hola, buenas noches soy ${this.nombre}`);
+//     }
 
+//     this.despedida = function name() {
+//         console.log(`Hasta luego, buenas noches, se despide ${this.nombre}`);
 //     }
 // }
 
-// const snoopy = new Animal("Snoopy", "Macho"),
-// lolaBunny = new Animal ("Lola Bunny", "Hembra")
+// const tony = new persona("Antony Veliz","Masculino","1759241050"),
+// victor = new persona("Victor Perez", "Masculino", "175924785"),
+// maria = new persona("Maria Virginia", "Femenino", "175989265")
 
-// console.log(snoopy);
-// console.log(lolaBunny);
+// console.log(tony);
+// console.log(victor);
+// console.log(maria);
 
-// snoopy.sonar();
-// snoopy.saludar();
+// tony.saludar();
+// tony.despedida();
 
-// lolaBunny.sonar();
-// lolaBunny.saludar();
+// victor.saludar()
+// maria.saludar()
 
+// //Codigo Optimizado, funcion constructora donde se asisgnan los metodos al prototipo, no a la funcion como tal.
+// //Funcion Constructora Optimizada donde asignamos los metodos al prototipo y no a la funcion como tal.
 
-//Codigo Optimizado, funcion constructora donde se asisgnan los metodos al prototipo, no a la funcion como tal.
-//Funcion Constructora Optimizada donde asignamos los metodos al prototipo y no a la funcion como tal.
+function Animal(nombre, genero) {
+    // // Atributos
+    this.nombre = nombre;
+    this.genero = genero;
+}
+// // Metodos agregados al prototipo de la funcion constructora.
+            Animal.prototype.sonar = function () {
+                console.log("Hago sonidos porque estoy vivo");
 
-// function Animal(nombre, genero) {
-//     Atributos
-//     this.nombre = nombre;
-//     this.genero = genero;
-// }
-// Metodos agregados al prototipo de la funcion constructora.
-//     Animal.prototype.sonar = function () {
-//         console.log("Hago sonidos porque estoy vivo");
+            }
+    Animal.prototype.saludar = function () {
+        console.log(`Hola me llamo ${this.nombre}`);
 
-//     }
-//     Animal.prototype.saludar = function () {
-//         console.log(`Hola me llamo ${this.nombre}`);
+    }
 
-//     }
+    // const snoopy = new Animal("Snoopy", "Macho"),
+    // lolaBunny = new Animal("Lola Bunny", "Hembra")
+
+    // console.log(snoopy);
+    // console.log(lolaBunny);
+
+    // snoopy.sonar();
+    // snoopy.saludar();
+
+    // lolaBunny.sonar();
+    // lolaBunny.saludar();
 
 //     Herencia Prototipal
-//     function Perro(nombre, genero, tamanio) {
-//         this.super= Animal;
-//         this.super(nombre,genero);
-//         this.tamanio = tamanio;
-//     }
+    // function Perro(nombre, genero, size) {
+    //     this.super= Animal;
+    //     this.super(nombre,genero);
+    //     this.tamanio = size;
+    // }
 
-//     Perro esta heredando  de Animal
-//     Perro.prototype = new Animal();
-//     Perro.prototype.constructor = Perro;
+    
+    // // //     Perro esta heredando  de Animal
+    //     Perro.prototype = new Animal();
+    //     Perro.prototype.constructor = Perro;
+    
+    // //   Sobreescritura del prototipo padre en hijo;
+    //     Perro.prototype.sonar = function () {
+    //             console.log("Soy un perro y ladro");
+        
+    //         }
+        
+    //         Perro.prototype.ladrar = function () {
+    //                 console.log("Guau Guau x3");
+            
+    //             }
+            
+            
+            
+    //         const snoopy = new Perro("Snoopy", "Macho", "Mediano"),
+    //         lolaBunny = new Animal("Lola Bunny", "Hembra")
+            
+    //         console.log(snoopy);
+    //         console.log(lolaBunny);
 
-//     Sobreescritura dele prototipo padre en hijo;
-//     Perro.prototype.sonar = function () {
-//         console.log("Soy un perro y ladro");
 
-//     }
-
-//     Perro.prototype.ladrar = function () {
-//         console.log("Guau Guau x3");
-
-//     }
-
-
-
-// const snoopy = new Perro("Snoopy", "Macho", "Mediano"),
-// lolaBunny = new Animal("Lola Bunny", "Hembra")
-
-// console.log(snoopy);
-// console.log(lolaBunny);
-
-// snoopy.sonar();
-// snoopy.saludar();
-// snoopy.ladrar();
-
-// lolaBunny.sonar();
-// lolaBunny.saludar();
+    //         snoopy.sonar();
+    //         snoopy.saludar();
+    //         snoopy.ladrar();
+            
+    //         lolaBunny.sonar();
+    //         lolaBunny.saludar();
+            
+            //     // //practica rapida de this
+            // let callingThis = ()=> {
+            //     console.log(this);
+            // }
+            
+            // callingThis();
+            // // Si llamamos a this desde una funcion u otro lugar, llamara al objeto global, es decir al objeto window, no obstante si lo llamamos desde un objeto, este sera su objeto global y podra llamar a las caracteristicas del objeto en el que se esta llamando, ver siguiente ejemplo:
+            // let whereIsThis = {
+            //     nombre: "tony",
+            //     nickname: "tonsvz",
+            
+            //     activo: function(){
+            //         this.nombre = "Antony";
+            //         console.log(this);
+            //     }
+            // }
+            
+            // console.log(whereIsThis.activo());
+            
+            // // fin practica this.
 
 // class randomPeople {
 //     constructor(name,gender) {
@@ -691,7 +726,7 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 // }
 // console.clear()
 
-// let x = 1, 
+// let x = 1,
 // y = 2,
 // testXY = "Se espera que X siempre sea menor que Y";
 
@@ -718,7 +753,7 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 // console.log(fecha.getYear());
 
 // console.log(fecha.getHours());
-// console.log(fecha.getMinutes()); 
+// console.log(fecha.getMinutes());
 // console.log(fecha.getSeconds());
 // console.log(fecha.toString());
 // console.log(fecha.toDateString());
@@ -775,7 +810,7 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 // console.log(confirmacion);
 // console.log(aviso);
 
-//Expresiones Regulares 
+//Expresiones Regulares
 
 /*Documentacion:
 https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
