@@ -1,34 +1,37 @@
-// class persona{
-//     constructor(nombre,edad){
-//         this.nombre = nombre;
-//         this.edad = edad;
+
+// class Espresso{
+//     constructor(coffee,portafilter,water){
+//         this.Coffee = coffee;
+//         this.Portafilter=portafilter;
+//         this.Water=water;
 //     }
 
-//     //Methods
-//     saludar(){
-//         console.log(`Hola mi nombre es ${this.nombre}, tengo ${this.edad} años y me dedico a ${this.profesion}`);
-//     };
-
-//     despedida(){
-//         console.log("Una buena tarde, hasta luego");
-//     };
+//     process(){
+//         console.log(`Agregamos 9gr de cafe ${this.Coffee} molienda fina en el portafiltro marca ${this.Portafilter} y 18gr de agua ${this.Water} durante un tiempo de ${Tony.getTiempo} de extraccion`);
+//     }
+    
 // }
 
-// class trabajo extends persona {
-//     constructor (nombre,edad,profesion){
-//         super(nombre,edad);
-//         this.profesion = profesion;
+// class Barista extends Espresso{
+//     constructor(coffee,portafilter,water,barista){
+//         super(coffee,portafilter,water)
+//         this.Barista = barista;
+//         this.Tiempo = null
 //     }
 
+//     get getTiempo(){
+//         return this.Tiempo
+//     }
+
+//     set setTiempo(Tiempo){
+//         this.Tiempo = Tiempo
+//     }
+
+
 // }
 
-// const tony = new trabajo("Antony Veliz","30","Programar Aplicaciones"),
-// maria = new trabajo("Maria Virginia", "28", "Modelaje");
+// const Tony = new Barista ("Rio Intag", "La Marzocco", "Tesalia", "Tony  Veliz");
 
-// console.log(tony);
-// console.log(maria);
-
-// maria.saludar();
-
-
-// tony.saludar();
+// console.log(Tony);
+// Tony.setTiempo ="20 a 30s";
+// Tony.process();

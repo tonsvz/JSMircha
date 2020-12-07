@@ -589,50 +589,68 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 
 // //Inicio de Class
 
-class Animal {
-    constructor(nombre,genero){
-        this.nombre = nombre;
-        this.genero = genero;
-    }
-    //methods
+// class Animal {
+//     constructor(nombre, genero) {
+//         this.nombre = nombre;
+//         this.genero = genero;
+//     }
+//     //methods
 
-    saludar(){
-        console.log(`Hola me llamo ${this.nombre}`);
+//     saludar() {
+//         console.log(`Hola me llamo ${this.nombre}`);
 
-    }
+//     }
 
-    sonar(){
-            console.log("Hago sonidos  porque estoy vivo");
-    }
-}
+//     sonar() {
+//         console.log("Hago sonidos  porque estoy vivo");
+//     }
+// }
 
-class Perro extends Animal{
-    constructor(nombre,genero,size){
-        super(nombre,genero);
-        this.tamaño = size;
+// class Perro extends Animal {
+//     constructor(nombre, genero, size) {
+//         super(nombre, genero);
+//         this.tamaño = size;
+//         this.raza = null;
 
-    }
+//     }
 
-    sonar(){
-        console.log("Hago sonidos  porque estoy vivo");
-    }
+//     sonar() {
+//         console.log("Hago sonidos  porque estoy vivo");
+//     }
 
-    ladrar(){
-        console.log("Guau Guau x3");
-    }
-}
+//     ladrar() {
+//         console.log("Guau Guau x3");
+//     }
+
+//     static queEres() {
+//         console.log("Los perros somos animales mamiferos que pertenecemos a la familia de los caninos. Somos considderados los mejores amigos del hombre.");
+//     }
+    
+//     get getRaza(){
+//         return this.raza;
+//     }
+
+//     set setRaza(raza){
+//         this.raza = raza;
+//     }
+// }
+// // Los setters y getters son metodos especialese que nos permiten establecer y obtener los valores de atributos de nuestra clase.
 
 
-const Minnie = new Animal("Minnie Mouse", "Femenino"),
-Scooby = new Perro("Scoobie Doo", "Masculino", "Grande");
+// Perro.queEres();
 
-console.log(Minnie);
-console.log(Scooby);
-Minnie.saludar();
-Minnie.sonar();
-Scooby.saludar();
-Scooby.sonar();
-Scooby.ladrar();
+// const Minnie = new Animal("Minnie Mouse", "Femenino"),
+//     Scooby = new Perro("Scoobie Doo", "Masculino", "Grande");
+
+// console.log(Minnie);
+// console.log(Scooby);
+// Minnie.saludar();
+// Minnie.sonar();
+// Scooby.saludar();
+// Scooby.sonar();
+// Scooby.ladrar();
+// Scooby.setRaza = "Gran Danes"
+// console.log(Scooby.getRaza);
 
 //Objeto Console
 
@@ -763,7 +781,7 @@ Scooby.ladrar();
 // console.clear();
 
 // function saludar(nombre) {
-//     nombre = nombre && "Desconocido"
+//     nombre = nombre || "Desconocido" 
 //     console.log(`Hola ${nombre}`);
 
 // }
@@ -771,6 +789,8 @@ Scooby.ladrar();
 // console.log();
 // saludar("Tony")
 // saludar();
+// console.log(true || false); // || OR tiende a marcar verdadero.
+// console.log(false && true ); // %% AND tiende a marcar falso.
 // console.log(true && false);
 
 // console.clear();
@@ -794,17 +814,15 @@ Scooby.ladrar();
 https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
 https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular#Construcci%C3%B3n_de_una_expresi%C3%B3n_regular
 */
-// let cadena = "Lorem ipsum dolor sit sit amet consectetur adipisicing elit. Provident minima sint ipsam corrupti magnam omnis reprehenderit. lorem lorem Fuga lorem rem ratione assumenda! Soluta officiis ut repellendus delectus, recusandae namarchitecto lorem amet explicabo65?"
+// let cadena = "Lorem dolor sit sit amet consectetur adipisicing elit. Provident minima sint ipsam corrupti magnam omnis reprehenderit.lorem lorem Fuga lorem rem ratione assumenda! Soluta officiis u56t repellendus delectus, recusandae lorem namarchitecto  amet explicabo?";
 
-// // let expReg = new RegExp("lorem","ig");
+// let expReg = new RegExp("lorem", "ig")
 
-// // console.log(expReg.test(cadena))
-// // console.log(expReg.exec(cadena))
-
-// let expReg2 = /lorem{1}/ig;
+// let expReg2 = /lorem{1}/ig; //<-- esta es la manera mas usada.
+// console.log(expReg.test(cadena));
+// console.log(expReg.exec(cadena));
 // console.log(expReg2.test(cadena));
 // console.log(expReg2.exec(cadena));
-// console.clear();
 
 //Funciones anonimas autoejecutables. IIFE (Inmediate Invoke Function Express)
 
