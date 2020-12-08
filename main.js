@@ -171,14 +171,19 @@
 
 // }
 
-// //loops
+//loops
 
-// let contador = 0;
-// while (contador < 10) {
-//     console.log("While" + contador)
-//     contador++;
+let counter = 10;
 
+// while (counter <10 ) {
+//     console.log("Iteracion" + counter );
+//     counter++
 // }
+
+do {
+    console.log("do while " + counter);
+    counter++
+} while (counter < 10);
 
 // do {
 //     console.log("Do While" + contador);

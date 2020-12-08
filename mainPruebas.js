@@ -47,7 +47,7 @@ let stringArray = (string = "", text ="") => {
     if(!string) return console.warn("No ingresaste un texto largo");
 
     if(!text) return console.warn("No ingresaste la palabra a evaluar");
-    let i=0
+    let i=0,
     counter = 0;
     while (i !== -1) {
         i = string.indexOf(text, i);
