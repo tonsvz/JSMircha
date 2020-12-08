@@ -1,71 +1,79 @@
-const button1 = document.querySelector(".btn1")
-const button2 = document.querySelector(".btn2")
-const button3 = document.querySelector(".btn3")
-const button4 = document.querySelector(".btn4")
-//Botones con su querySelector.
+const button1 = document.querySelector(".btn1");
+const button2 = document.querySelector(".btn2");
+const button3 = document.querySelector(".btn3");
+const button4 = document.querySelector(".btn4");
+const button5 = document.querySelector(".btn5");
 
 button1.addEventListener("click", () => {
-    alert("Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion (Hola Mundo) devolverá 10.")
-    let valor = prompt("Inserte un texto a evaluar");
-    ex01(valor)
+    alert("Porfavor ingresar un cadena de ciertos caracteres para que puedan ser evaluados y retorne la cantidad de caracteres que estan presentes")
+    let value = prompt("Ingrese una cadena de caracteres para evaluarse")
+    ex1(value)
 })
+
 
 button2.addEventListener("click", () => {
     alert("Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion (Hola Mundo, 4) devolverá: Hola")
-    let str = prompt("Inserte un texto a evaluar");
-    let cropText = prompt("Ingrese cantidad de caracteres a recortar")
-    ex02(str, cropText)        
+    let txt = prompt("Inserte un texto a evaluar")
+    cropText = prompt("Ingrese un valor para que se aplique y se recorte en la cadena de texto")
+    ex2(txt, cropText)
 })
+
 button3.addEventListener("click", () => {
     alert("Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal']")
-    let textToArray = prompt("Inserte un texto a evaluar")
-    ex03(textToArray)
+    let textToArray = prompt("Ingrese texto a evaluar")
+    ex3(textToArray)
 })
+
 button4.addEventListener("click", () => {
     alert("Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.")
-    let redo = prompt("Insere un texto a evaluar")
-    let counter = prompt("Ingrese la cantidad de veces a repetir")
-    ex04(redo, counter)
+    let redo = prompt("Ingrese una cadena texto para repetir")
+    let counter = prompt("Ingrese el numero de repeticiones")
+    ex4(redo, counter)  
 })
 
-//funciones a ejecutar
-//Ejercicio 01
+button5.addEventListener("click", () => {
+            alert("Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion(Hola Mundo) devolverá odnuM aloH")
+            let str = prompt("ingrese")
+            ex5(str)
+            })
 
-const ex01 = (string) => {
-    if (typeof string != "string") {
-        alert("Ingrese un valor con caracteres para ser evaluado")
-    } else {
-        alert(`El numero de caracteres que contiene el valor ingresado es ${string.length}.`)
-    }
-}
+        let ex1 = (string = "") => {
+            if (!string) {
+                alert("Unicamente caracteres son aceptados")
+            } else {
+                alert(`La palabra ${string.toUpperCase()} contiene  ${string.length} caracteres`)
+            }
+        }
 
-//Ejercicio 021
+        let ex2 = (txt, cropText) => {
+            alert(`El resultado recortado es ${txt.substr(0,cropText)}`)
+        }
 
-const ex02 = (str, cropText) => {
-    cropText = cropText * 1
-    alert(`El resultado recortado es ${str.substr(0,cropText)}`)
+        let ex3 = (textToArray) => {
+            answer = textToArray.split(" ")
+            console.log(answer);
+            return alert("Observa por consola el resultado.")
+        }
 
-
-}
-
-//Ejercicio 03
-
-
-const ex03 = (textToArray) => {
-    result = textToArray.split(" ");
-    console.log(result);
-    return alert('Mira por consola el arreglo devuelto');
-}
-//Revisar urgentemente la documentacion de MDN Dev Network acerca de String.substr para entender su funcionamiento.       if (typeof str != 'string') {
-
-//Ejercicio 04
+        let ex4 = (redo, counter) => {
+            repeat = redo.repeat(counter)
+            alert(`Este es el texto repetido ${repeat}`)
+        }
 
 
-const ex04 = (redo, counter) => {
-    repeticion = redo.repeat(counter)
-    alert(`Este es el texto repetido: ${repeticion}`)
+        let ex5 = (str="") => {
+            if (!str) {
+                alert("Unicamente caracteres son permitidos")
+            } else {
+                reverse = str.split("").reverse("").join("");
+                alert(`El resultado invertido es ${reverse.toUpperCase()}`)
+            }
 
-    
-}
+        }
 
 
+
+
+
+
+        //Revisar urgentemente la documentacion de MDN Dev Network acerca de String.substr para entender su funcionamiento.       if (typeof str != 'string') {

@@ -830,13 +830,13 @@ https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular#Construcci%C3%B3n_de_una_ex
 //     console.log("Mi primer IIFE");
 // })();
 
+
 // (function (d, w, c) {
 //     console.log("Mi segunda IIFE");
 //     console.log(d);
 //     console.log(w);
 //     console.log(c);
-//     c.log("Este es un console.log resumido")
-
+//     c.log(d)
 // })(document, window, console);
 
 

@@ -10,3 +10,4 @@ function restar(a,b) {
 export const aritmetica = {
     sumar,restar
 };
+
