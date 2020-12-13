@@ -1,4 +1,3 @@
-
 // class Espresso{
 //     constructor(coffee,portafilter,water){
 //         this.Coffee = coffee;
@@ -9,7 +8,7 @@
 //     process(){
 //         console.log(`Agregamos 9gr de cafe ${this.Coffee} molienda fina en el portafiltro marca ${this.Portafilter} y 18gr de agua ${this.Water} durante un tiempo de ${Tony.getTiempo} de extraccion`);
 //     }
-    
+
 // }
 
 // class Barista extends Espresso{
@@ -43,23 +42,66 @@
 // })(document,console,window) // Funcion Anonima Autoejecutable.
 
 
-let stringArray = (string = "", text ="") => {
-    if(!string) return console.warn("No ingresaste un texto largo");
+let stringToArray = (string = "", text = "") => {
+    if (!string) 
+        return console.log("Debes ingresar un texto a evaluar");
+    if (!text) 
+        return console.log("Debes ingresar un texto a evaluar");
 
-    if(!text) return console.warn("No ingresaste la palabra a evaluar");
-    let i=0,
-    counter = 0;
-    while (i !== -1) {
-        i = string.indexOf(text, i);
-        if (i !==-1) {
-            i++;
-            counter++;
+        string = string.toLocaleLowerCase();
+        text = text.toLocaleLowerCase();
+
+    
+    let i =0,
+    counter=0;
+
+    while (i!== -1) {
+        i = string.indexOf(text,i)        
+
+        if (i!==-1) {
+            i++
+            counter++
+
         }
     }
-return console.info(`La palabra ${text} se repite ${counter} veces`)
+
+    return console.log(`La palabra ${text} se repite ${counter} veces`);
+
 }
 
-stringArray();
-stringArray("Hola mundo mundo mundo", "mundo" )
+stringToArray("pepe pepe pe3pe", "pepe")
 
+
+class person {
+    constructor(name, age) {
+        this.age = age;
+        this.name = name;
+    }
+
+    salute() {
+        console.log(`Hello im ${this.name} and my age is ${this.age} and im a ${tony.getSex}`);
+    }
+
+
+}
+
+class job extends person {
+    constructor(name, age, job) {
+        super(name, age);
+        this.job = job
+        this.sex = null;
+    }
+
+    get getSex() {
+        return this.sex;
+    }
+
+    set setSex(sex) {
+        this.sex = sex;
+    }
+}
+
+let tony = new job("Antony", "20", "Developer");
+tony.setSex = "Male"
+tony.salute();
 

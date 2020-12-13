@@ -4,6 +4,10 @@ const button3 = document.querySelector(".btn3");
 const button4 = document.querySelector(".btn4");
 const button5 = document.querySelector(".btn5");
 
+const button7 = document.querySelector(".btn6");
+
+
+
 button1.addEventListener("click", () => {
     alert("Porfavor ingresar un cadena de ciertos caracteres para que puedan ser evaluados y retorne la cantidad de caracteres que estan presentes")
     let value = prompt("Ingrese una cadena de caracteres para evaluarse")
@@ -36,6 +40,11 @@ button5.addEventListener("click", () => {
             let str = prompt("ingrese")
             ex5(str)
             })
+button7.addEventListener("click",() => {
+    alert("Programa una funcion que detecte si un string es palindromo")
+    let word = prompt("Ingrese una palabra")
+    ex7(word)
+})
 
         let ex1 = (string = "") => {
             if (!string) {
@@ -70,8 +79,22 @@ button5.addEventListener("click", () => {
             }
 
         }
+let ex7 = (word="") => {
+if (!word) {
+    alert("Ingrese una funcion a evaluar");
+    
+}   
+word = word.toLowerCase();
 
+let backwardWord = word.split("").reverse().join("");
+if(word === backwardWord){
+    alert(`La palabra ${word} es un palindromo`)
+}else{
+    alert(`La palabra ${word} NO un palindromo`)
 
+}
+
+}
 
 
 
