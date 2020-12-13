@@ -42,7 +42,7 @@
 // })(document,console,window) // Funcion Anonima Autoejecutable.
 
 
-let stringToArray = (string = "", text = "") => {
+let stringToArray = (string="", text="") => {
     if (!string) 
         return console.log("Debes ingresar un texto a evaluar");
     if (!text) 
@@ -52,16 +52,14 @@ let stringToArray = (string = "", text = "") => {
         text = text.toLocaleLowerCase();
 
     
-    let i =0,
-    counter=0;
+let i = 0,
+    counter= 0;
 
-    while (i!== -1) {
-        i = string.indexOf(text,i)        
-
+    while (i!==-1) {
+        i=string.indexOf(text,i)
         if (i!==-1) {
             i++
             counter++
-
         }
     }
 
@@ -69,7 +67,6 @@ let stringToArray = (string = "", text = "") => {
 
 }
 
-stringToArray("pepe pepe pe3pe", "pepe")
 
 
 class person {
