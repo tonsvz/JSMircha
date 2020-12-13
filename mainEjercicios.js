@@ -109,7 +109,7 @@ let ex6 = (string ="",text="") => {
         }
     }
 
-    return alert(`La palabra ${text} se encontro ${counter} veces en el texto ingresado.`)
+    return alert(`La palabra o letra ${text} se encontro ${counter} veces en el texto ingresado.`)
 } 
 
 
