@@ -40,7 +40,7 @@
 //     w.log(c);
 //     w.log(w);
 // })(document,console,window) // Funcion Anonima Autoejecutable.
-
+//lets rocck
 
 let stringToArray = (string="", text="") => {
     if (!string) 
