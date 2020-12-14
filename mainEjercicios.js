@@ -84,7 +84,6 @@ let ex4 = (redo, counter) => {
     alert(`Este es el texto repetido ${repeat}`)
 }
 
-
 let ex5 = (str = "") => {
     if (!str) {
         alert("Unicamente caracteres son permitidos")
@@ -92,7 +91,6 @@ let ex5 = (str = "") => {
         reverse = str.split("").reverse("").join("");
         alert(`El resultado invertido es ${reverse.toUpperCase()}`)
     }
-
 }
 
 let ex6 = (string = "", text = "") => {
@@ -127,9 +125,7 @@ let ex7 = (word = "") => {
         alert(`La palabra ${word} SI es un palindromo`)
     } else {
         alert(`La palabra ${word} NO un palindromo`)
-
     }
-
 }
 
 let ex8 = (num = 0) => {
@@ -145,6 +141,4 @@ let ex8 = (num = 0) => {
         alert(`El numero ${num} no es capicua`)
     }
 }
-
-
 //Revisar urgentemente la documentacion de MDN Dev Network acerca de String.substr para entender su funcionamiento.       if (typeof str != 'string') {
