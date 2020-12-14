@@ -95,33 +95,24 @@ let ex5 = (str = "") => {
 
 }
 
-let ex6 = (string = "", text = "") => {
-    if (!string)
-        return alert("Es necesario ingresar una frase para evaluar");
+let ex6 = (string="", text = "") => {
+if(!string)return alert(`Es necesario ingresar un texto para ser evaluado`)
+if(!text) return alert(`Es necesario ingresar una palabra o letra para ser encontrada en el texto`)
 
-    if (!text)
-        return alert("Es necesario ingresar una palabra para ser encontrada");
+string = string.toLowerCase();
+text = text.toLowerCase();
 
-    string = string.toLowerCase();
-    text = text.toLowerCase();
+let i = 0, counter = 0;
+ while (i!==-1) {
+     i = string.indexOf(text,i)
 
-    let i = 0,
-        counter = 0;
-
-    while (i !== -1) {
-        i = string.indexOf(text, i)
-        if (i !== -1) {
-            i++;
-            counter++;
-
-        }
-    }
-
-    return alert(`La palabra o letra ${text} se encontro ${counter} veces en el texto ingresado.`)
+     if (i!==-1) {
+         i++
+         counter++;
+     }
+ }
+ return alert (`La palabra ${text} se repite ${counter} veces`)
 }
-
-
-
 
 let ex7 = (word = "") => {
     if (!word) {
@@ -141,17 +132,17 @@ let ex7 = (word = "") => {
 }
 
 let ex8 = (num=0) => {
-    if(!num) return alert("Es necesario ingresar un numero para ser evaluado")
+    if(!num) return alert("Es de caracter obligatorio ingresar un numero para ser evaluado")
 
-    num = num.toString();
+    num=num.toString();
 
-    let backNum = num.split("").reverse().join("");
-    if (backNum===num) {
-        alert(`El numero ${num} SI es capicua`)
-    } else {
-        alert(`El numero ${num} NO es capicua`)
+    backNum = num.split("").reverse().join("");
+
+    if (backNum === num) {
+        alert(`El numero ${num} SI es capicua, este es el resultado ${backNum}`)
+    }else{
+        alert(`El numero ${num} no es capicua`)
     }
-
 }
 
 
