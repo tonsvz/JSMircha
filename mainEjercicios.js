@@ -6,6 +6,7 @@ const button5 = document.querySelector(".btn5");
 const button6 = document.querySelector(".btn6")
 const button7 = document.querySelector(".btn7");
 const button8 = document.querySelector(".btn8");
+const button8 = document.querySelector(".btn9");
 
 
 
