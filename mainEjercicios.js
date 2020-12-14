@@ -5,6 +5,7 @@ const button4 = document.querySelector(".btn4");
 const button5 = document.querySelector(".btn5");
 const button6 = document.querySelector(".btn6")
 const button7 = document.querySelector(".btn7");
+const button8 = document.querySelector(".btn8");
 
 
 
@@ -45,13 +46,18 @@ button6.addEventListener("click", () => {
     alert("Programa una funcion que dado un string ingresado detecte cuantas veces se repite en un texto")
     let string = prompt("Ingrese una cadena de texto a evaluar")
     let text = prompt("ingrese una palabra para encontrar");
-    ex6(string,text)
+    ex6(string, text)
 })
 
-button7.addEventListener("click",() => {
-    alert("Programa una funcion que detecte si un string es palindromo")
+button7.addEventListener("click", () => {
+    alert("Programa una funcion que detecte si un string es palindromo (dicese de una palabra que puede leerse en reversa de la misma manera)")
     let word = prompt("Ingrese una palabra")
     ex7(word)
+})
+button8.addEventListener("click", () => {
+    alert("Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true")
+    let num = prompt("Ingrese un numero")
+    ex8(num)
 })
 
 //funciones
@@ -89,28 +95,31 @@ let ex5 = (str = "") => {
 
 }
 
-let ex6 = (string ="",text="") => {
-    if(!string)
-    return console.warn("Debes ingresar un texto para ser evaluado")
-    if(!text)
-    return console.warn("Debes ingresar una palabra para ser encontrar")
+let ex6 = (string = "", text = "") => {
+    if (!string)
+        return alert("Es necesario ingresar una frase para evaluar");
+
+    if (!text)
+        return alert("Es necesario ingresar una palabra para ser encontrada");
 
     string = string.toLowerCase();
     text = text.toLowerCase();
 
-    let i = 0,counter = 0;
+    let i = 0,
+        counter = 0;
 
-    while (i!==-1) {
-        i = string.indexOf(text,i)
+    while (i !== -1) {
+        i = string.indexOf(text, i)
+        if (i !== -1) {
+            i++;
+            counter++;
 
-        if (i!==-1) {
-            i++
-            counter++
         }
     }
 
     return alert(`La palabra o letra ${text} se encontro ${counter} veces en el texto ingresado.`)
-} 
+}
+
 
 
 
@@ -131,7 +140,19 @@ let ex7 = (word = "") => {
 
 }
 
+let ex8 = (num=0) => {
+    if(!num) return alert("Es necesario ingresar un numero para ser evaluado")
 
+    num = num.toString();
+
+    let backNum = num.split("").reverse().join("");
+    if (backNum===num) {
+        alert(`El numero ${num} SI es capicua`)
+    } else {
+        alert(`El numero ${num} NO es capicua`)
+    }
+
+}
 
 
 //Revisar urgentemente la documentacion de MDN Dev Network acerca de String.substr para entender su funcionamiento.       if (typeof str != 'string') {

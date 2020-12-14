@@ -102,3 +102,17 @@ let tony = new job("Antony", "20", "Developer");
 tony.setSex = "Male"
 tony.salute();
 
+class weed {
+    constructor(type,color){
+        this.type= type;
+        this.color = color;
+    }
+
+    high(){
+        console.log(`Im a ${this.type} weed and my color is ${this.color}`);
+    }
+        }
+
+        let marihuana = new weed("Sativa", "Green/Blue")
+    marihuana.high();
+
