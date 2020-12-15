@@ -116,3 +116,21 @@ class weed {
         let marihuana = new weed("Sativa", "Green/Blue")
     marihuana.high();
 
+    const factorial = (numero = undefined) => {
+        if (numero === undefined) return console.error("No ingresaste un numero");        
+        
+        if(numero !=="number")console.error(`El valor de ${numero} ingresado, NO es un numero`);    
+    
+        if(numero === 0) return console.error("El numero no puede ser 0");
+        if(Math.sign(numero)===-1) return console.error("El numero no puede ser negativo");
+        let factorial = 1;
+    
+        for (let i = numero; i > 1;i--){
+            factorial *=i;
+        }
+    
+        return console.info(`El factorial de ${numero} es ${factorial}`)
+    }
+    
+    factorial(50)
+    factorial([1,2,3])
