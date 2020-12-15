@@ -1,5 +1,5 @@
 const button1 = document.querySelector(".btn1"); //Botones
-const button2 = document.querySelector(".btn2");
+const button2 = document.querySelector(".btn2"); //Botones 2
 const button3 = document.querySelector(".btn3");
 const button4 = document.querySelector(".btn4");
 const button5 = document.querySelector(".btn5");
