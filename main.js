@@ -173,17 +173,17 @@
 
 //loops
 
-let counter = 10;
+// let counter = 10;
 
-// while (counter <10 ) {
-//     console.log("Iteracion" + counter );
+// // while (counter <10 ) {
+// //     console.log("Iteracion" + counter );
+// //     counter++
+// // }
+
+// do {
+//     console.log("do while " + counter);
 //     counter++
-// }
-
-do {
-    console.log("do while " + counter);
-    counter++
-} while (counter < 10);
+// } while (counter < 10);
 
 // do {
 //     console.log("Do While" + contador);
@@ -875,4 +875,20 @@ https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular#Construcci%C3%B3n_de_una_ex
 //windows 10 start
 //Pull
 //Prueba Fetch asd
+// setInterval(() => {
+//     console.log(new Date().toLocaleTimeString());
+// },1000)
 
+// setTimeout(() => {
+//     console.log("Hola buenos dias");
+// },1000)
+
+let temporizador = setInterval(() => {
+    console.log(new Date().toLocaleTimeString());
+},1000)
+
+// clearTimeout(temporizador);
+// console.log("Despues del clearTimeOut");
+
+clearInterval(temporizador);
+console.log("Despues del clearInterval");
