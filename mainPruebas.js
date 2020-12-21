@@ -42,95 +42,122 @@
 // })(document,console,window) // Funcion Anonima Autoejecutable.
 //lets rocck
 
-let stringToArray = (string="", text="") => {
-    if (!string) 
-        return console.log("Debes ingresar un texto a evaluar");
-    if (!text) 
-        return console.log("Debes ingresar un texto a evaluar");
+// let stringToArray = (string="", text="") => {
+//     if (!string) 
+//         return console.log("Debes ingresar un texto a evaluar");
+//     if (!text) 
+//         return console.log("Debes ingresar un texto a evaluar");
 
-        string = string.toLocaleLowerCase();
-        text = text.toLocaleLowerCase();
+//         string = string.toLocaleLowerCase();
+//         text = text.toLocaleLowerCase();
 
     
-let i = 0,
-    counter= 0;
+// let i = 0,
+//     counter= 0;
 
-    while (i!==-1) {
-        i=string.indexOf(text,i)
-        if (i!==-1) {
-            i++
-            counter++
-        }
-    }
+//     while (i!==-1) {
+//         i=string.indexOf(text,i)
+//         if (i!==-1) {
+//             i++
+//             counter++
+//         }
+//     }
 
-    return console.log(`La palabra ${text} se repite ${counter} veces`);
+//     return console.log(`La palabra ${text} se repite ${counter} veces`);
 
-}
-
-
-
-class person {
-    constructor(name, age) {
-        this.age = age;
-        this.name = name;
-    }
-
-    salute() {
-        console.log(`Hello im ${this.name} and my age is ${this.age} and im a ${tony.getSex}`);
-    }
+// }
 
 
-}
 
-class job extends person {
-    constructor(name, age, job) {
-        super(name, age);
-        this.job = job
-        this.sex = null;
-    }
+// class person {
+//     constructor(name, age) {
+//         this.age = age;
+//         this.name = name;
+//     }
 
-    get getSex() {
-        return this.sex;
-    }
+//     salute() {
+//         console.log(`Hello im ${this.name} and my age is ${this.age} and im a ${tony.getSex}`);
+//     }
 
-    set setSex(sex) {
-        this.sex = sex;
-    }
-}
 
-let tony = new job("Antony", "20", "Developer");
-tony.setSex = "Male"
-tony.salute();
+// }
 
-class weed {
-    constructor(type,color){
-        this.type= type;
-        this.color = color;
-    }
+// class job extends person {
+//     constructor(name, age, job) {
+//         super(name, age);
+//         this.job = job
+//         this.sex = null;
+//     }
 
-    high(){
-        console.log(`Im a ${this.type} weed and my color is ${this.color}`);
-    }
-        }
+//     get getSex() {
+//         return this.sex;
+//     }
 
-        let marihuana = new weed("Sativa", "Green/Blue")
-    marihuana.high();
+//     set setSex(sex) {
+//         this.sex = sex;
+//     }
+// }
 
-    const factorial = (numero = undefined) => {
-        if (numero === undefined) return console.error("No ingresaste un numero");        
+// let tony = new job("Antony", "20", "Developer");
+// tony.setSex = "Male"
+// tony.salute();
+
+// class weed {
+//     constructor(type,color){
+//         this.type= type;
+//         this.color = color;
+//     }
+
+//     high(){
+//         console.log(`Im a ${this.type} weed and my color is ${this.color}`);
+//     }
+//         }
+
+//         let marihuana = new weed("Sativa", "Green/Blue")
+//     marihuana.high();
+
+
+
+
+// const factorial = (number=undefined) => {
+//     if(number===undefined) return console.error("Se debe ingresar un numero para evaluar");
+//     if(typeof number !=="number") return console.error("Solo se permiten numeros para evaluar");
+//     if(number===0) return console.error("No se puede evaluar factorial de 0");
+//     if(Math.sign(number)===-1) return console.error("No se puede evaluar numeros negativos");
+
+//     let factorial = 1;
+
+//     for (let i = number; i >1 ; i--) {
+//         factorial*=i;
         
-        if(numero !=="number")console.error(`El valor de ${numero} ingresado, NO es un numero`);    
+//     }
+
+//     return console.log(`El factorial de ${number} es ${factorial}`);   
     
-        if(numero === 0) return console.error("El numero no puede ser 0");
-        if(Math.sign(numero)===-1) return console.error("El numero no puede ser negativo");
-        let factorial = 1;
+// }
+
+// factorial(5)
+
+
+//Programa una funcion para convertir grados Celsius a Farenheit y visceversa
+
+// const convertidorGrados = (grados = undefined, unidad = undefined) => {
+//     if(grados === undefined) return console.warn("No ingresaste grados a convertir");
+//     if(typeof grados !=="number") return console.error(`El valor de ${grados} ingresado, NO es un numero`);
+
+//     if(unidad=== undefined) console.warn("No ingresaste el tipo de grado a convertir");
+//     if (typeof unidad !=="string") return console.error(`El valor ${unidad} ingresado, NO es una cadena de texto`);
     
-        for (let i = numero; i > 1;i--){
-            factorial *=i;
-        }
-    
-        return console.info(`El factorial de ${numero} es ${factorial}`)
-    }
-    
-    factorial(50)
-    factorial([1,2,3])
+//     if(unidad.length !==1 || !/(C|F)/i.test(unidad)) return console.warn("El valor de unidad no es Reconocido");
+
+//     if (unidad === "C"|| unidad ==="c") {
+//         return console.info(`${grados}ºC =${Math.round(grados * (9/5)+32)}ºF`)
+//     }else if (unidad === "F"|| unidad ==="f"){
+//         return console.info (`${grados}ºF = ${Math.round((grados-32) * (5/9))}ºC`)
+//     }
+//     console.info("funciono")
+// }
+
+// convertidorGrados()
+// convertidorGrados(100,"c")
+// convertidorGrados(100,"F")
