@@ -946,4 +946,79 @@ https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular#Construcci%C3%B3n_de_una_ex
 //     console.log("Fin");
 // })()
 
-//Callbacks
+//Callbacks 
+
+// function squareCallback(value, callback) {
+//     setTimeout(() => {
+//         callback(value, value * value);
+//     }, 0 | Math.random() * 3000);
+// }
+//Callback Hell
+// squareCallback(0, (value, result) => {
+//     console.log("Inicia Callback");
+//     console.log(`Callback: ${value}, ${result}`);
+//     squareCallback(1, (value, result) => {
+//         console.log(`Callback: ${value}, ${result}`);
+//         squareCallback(2, (value, result) => {
+//             console.log(`Callback: ${value}, ${result}`);
+//             squareCallback(3, (value, result) => {
+//                 console.log(`Callback: ${value}, ${result}`);
+//                 squareCallback(4, (value, result) => {
+//                     console.log(`Callback: ${value}, ${result}`);
+//                     squareCallback(5, (value, result) => {
+//                         console.log(`Callback: ${value}, ${result}`);
+//                         squareCallback(6, (value, result) => {
+//                             console.log(`Callback: ${value}, ${result}`);
+//                         })
+//                     })
+//                 })
+//             })
+//         })
+//     })
+// })
+
+//Promises
+
+function squarePromise(value) {
+    if(typeof value !== "number"){
+    
+        return Promise.reject(`Error, el valor ${value} ingresado no es un numero`);
+    
+    }
+        
+
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve({
+                value,
+                result: value * value
+            }); //Return positivo
+        }, 0 | Math.random() * 1000);
+
+    })
+}
+
+squarePromise(0)
+    .then(obj => {
+        console.log("Inicia promise");
+        console.log(`Promise: ${obj.value}, ${obj.result}`);
+        return squarePromise(1);
+        //console.log(obj);
+    })
+    .then(obj => {
+        console.log(`Promise: ${obj.value}, ${obj.result}`);
+        return squarePromise(2);
+    })
+    .then(obj => {
+        console.log(`Promise: ${obj.value}, ${obj.result}`);
+        return squarePromise(3);
+    })
+    .then(obj => {
+        console.log(`Promise: ${obj.value}, ${obj.result}`);
+        return squarePromise(4);
+    })
+    .then(obj => {
+        console.log(`Promise:${obj.value}, ${obj.result}`);
+        console.log("Fin de la promesa");
+    })
+    .catch(err =>console.error(err));
