@@ -630,7 +630,7 @@ Metodos - Son las acciones que un objeto puede realizar.*/
 //     static queEres() {
 //         console.log("Los perros somos animales mamiferos que pertenecemos a la familia de los caninos. Somos considderados los mejores amigos del hombre.");
 //     }
-    
+
 //     get getRaza(){
 //         return this.raza;
 //     }
@@ -896,3 +896,54 @@ https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular#Construcci%C3%B3n_de_una_ex
 // console.log("Despues del clearInterval");
 
 //Ansync y Event loops
+
+/* Procesamiento Single thread y Multi Thread
+ Operaciones de CPU Y operaciones de I/O (entrada y salida);
+ Operaciones Concurrentes y paralelas
+ Operaciones Bloqueantes y No bloqueantes
+ Opereaciones Sincronas y Asincronas*/
+
+/*Codigo Sincrono Bloqueante*/
+// (() => {
+//     console.log("Codigo Sincrono");
+//     console.log("Inicio");
+
+//     function dos() {
+//         console.log("Dos");
+//     }
+
+//     function uno() {
+//         console.log("Uno");
+//         dos();
+//         console.log("Tres");
+//     }
+//     uno();
+//     console.log("fin");
+//     console.log("********");
+// })()
+
+/*Codigo Asincrono No Bloqueante*/
+
+// (() => {
+//     console.log("Codigo Asincrono");
+//     console.log("Inicio");
+
+//     function dos() {
+//         setTimeout(function () {
+//             console.log("Dos");
+//         }, 1000)
+//     }
+
+//     function uno() {
+//         setTimeout(function () {
+//             console.log("Uno");
+//         }, 0);
+//         dos();
+//         console.log("Tres");
+//     }
+
+//     uno();
+//     console.log("Fin");
+// })()
+
+//Callbacks
