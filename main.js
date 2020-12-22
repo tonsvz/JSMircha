@@ -883,12 +883,16 @@ https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular#Construcci%C3%B3n_de_una_ex
 //     console.log("Hola buenos dias");
 // },1000)
 
-let temporizador = setInterval(() => {
-    console.log(new Date().toLocaleTimeString());
-},1000)
 
-// clearTimeout(temporizador);
-// console.log("Despues del clearTimeOut");
+// //set interval // set timeout
+// let temporizador = setInterval(() => {
+//     console.log(new Date().toLocaleTimeString());
+// },1000)
 
-clearInterval(temporizador);
-console.log("Despues del clearInterval");
+// // clearTimeout(temporizador);
+// // console.log("Despues del clearTimeOut");
+
+// clearInterval(temporizador);
+// console.log("Despues del clearInterval");
+
+//Ansync y Event loops
