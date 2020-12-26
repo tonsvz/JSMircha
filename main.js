@@ -979,46 +979,157 @@ https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular#Construcci%C3%B3n_de_una_ex
 
 //Promises
 
-function squarePromise(value) {
-    if(typeof value !== "number"){
-    
-        return Promise.reject(`Error, el valor ${value} ingresado no es un numero`);
-    
-    }
-        
+// function squarePromise(value) {
+//     if(typeof value !== "number"){
 
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve({
-                value,
-                result: value * value
-            }); //Return positivo
-        }, 0 | Math.random() * 1000);
+//         return Promise.reject(`Error, el valor ${value} ingresado no es un numero`);
 
-    })
+//     }
+
+
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve({
+//                 value,
+//                 result: value * value
+//             }); //Return positivo
+//         }, 0 | Math.random() * 1000);
+
+//     })
+// }
+
+// squarePromise(0)
+//     .then(obj => {
+//         console.log("Inicia promise");
+//         console.log(`Promise: ${obj.value}, ${obj.result}`);
+//         return squarePromise(1);
+//         //console.log(obj);
+//     })
+//     .then(obj => {
+//         console.log(`Promise: ${obj.value}, ${obj.result}`);
+//         return squarePromise(2);
+//     })
+//     .then(obj => {
+//         console.log(`Promise: ${obj.value}, ${obj.result}`);
+//         return squarePromise(3);
+//     })
+//     .then(obj => {
+//         console.log(`Promise: ${obj.value}, ${obj.result}`);
+//         return squarePromise(4);
+//     })
+//     .then(obj => {
+//         console.log(`Promise:${obj.value}, ${obj.result}`);
+//         console.log("Fin de la promesa");
+//     })
+//     .catch(err =>console.error(err));
+
+
+// function squarePromise(value) {
+//     if (typeof value !== "number") {
+
+//         return Promise.reject(`Error, el valor ${value} ingresado no es un numero`);
+
+//     }
+
+
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve({
+//                 value,
+//                 result: value * value
+//             }); //Return positivo
+//         }, 0 | Math.random() * 1000);
+
+//     })
+// }
+// //funciones declaradas
+// async function asyncFunction() {
+//     try {
+//         console.log("Inicio de Async Function");
+
+//         let obj = await squarePromise(1);
+//         console.log(`Async Function ${obj.value}, ${obj.result}`);
+
+//         obj = await squarePromise(4);
+//         console.log(`Async Function ${obj.value}, ${obj.result}`);
+//     } 
+
+//     catch(err){
+//         console.log(err);
+//     }
+//     console.log("Fin Async Function");
+// }
+
+// asyncFunction();
+
+// //Funciones expresadas
+// const functionasync = async() => {
+//     try {
+//         console.log("Inicio de Async Function");
+
+//         let obj = await squarePromise(1);
+//         console.log(`Async Function ${obj.value}, ${obj.result}`);
+
+//         obj = await squarePromise(4);
+//         console.log(`Async Function ${obj.value}, ${obj.result}`);
+//     } 
+
+//     catch(err){
+//         console.log(err);
+//     }
+// }
+
+// functionasync();
+
+// //Symbol()
+
+// let id = Symbol("id")
+// ,id2 = Symbol("id2");
+
+// console.log(id===id2);
+// console.log(id,id2);
+// console.log(typeof id, typeof id2);
+
+// const NOMBRE = Symbol();
+
+// const persona = {
+// [NOMBRE]:"Tony"
+// };
+
+// console.log(persona);
+// persona.NOMBRE = "Antony Veliz"
+// console.log(persona);
+function chainToSwitch(val) {
+    var answer = "";
+    // Only change code below this line
+switch (val) {
+    case "bob":
+        answer = "Marley";
+        break;
+    case 42:
+        answer = "The Answer";
+        break;
+    case 1:
+        answer = "There is no #1";
+        break;
+    case 99:
+        answer = "Missed me by this much!";
+        break;
+    case 7:
+        answer = "Ate Nine";
+        break;
+
+    case "John":
+        answer = "";
+        break;
+    case 156:
+        answer = "";
+        break;
+
+        // Only change code above this line
+    default:
+        answer: "The Answer";
+        break;
+ }
 }
-
-squarePromise(0)
-    .then(obj => {
-        console.log("Inicia promise");
-        console.log(`Promise: ${obj.value}, ${obj.result}`);
-        return squarePromise(1);
-        //console.log(obj);
-    })
-    .then(obj => {
-        console.log(`Promise: ${obj.value}, ${obj.result}`);
-        return squarePromise(2);
-    })
-    .then(obj => {
-        console.log(`Promise: ${obj.value}, ${obj.result}`);
-        return squarePromise(3);
-    })
-    .then(obj => {
-        console.log(`Promise: ${obj.value}, ${obj.result}`);
-        return squarePromise(4);
-    })
-    .then(obj => {
-        console.log(`Promise:${obj.value}, ${obj.result}`);
-        console.log("Fin de la promesa");
-    })
-    .catch(err =>console.error(err));
+chainToSwitch(7);
