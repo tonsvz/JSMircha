@@ -1099,37 +1099,163 @@ https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular#Construcci%C3%B3n_de_una_ex
 // console.log(persona);
 // persona.NOMBRE = "Antony Veliz"
 // console.log(persona);
-function chainToSwitch(val) {
-    var answer = "";
-    // Only change code below this line
-switch (val) {
-    case "bob":
-        answer = "Marley";
-        break;
-    case 42:
-        answer = "The Answer";
-        break;
-    case 1:
-        answer = "There is no #1";
-        break;
-    case 99:
-        answer = "Missed me by this much!";
-        break;
-    case 7:
-        answer = "Ate Nine";
-        break;
 
-    case "John":
-        answer = "";
-        break;
-    case 156:
-        answer = "";
-        break;
+// const set = new Set();
+// set.add(1)
+// set.add(2)
+// set.add(3)
+// set.add("Tony")
+// set.add("Veliz")
 
-        // Only change code above this line
-    default:
-        answer: "The Answer";
-        break;
- }
-}
-chainToSwitch(7);
+// // console.log(set);
+
+// // for (item of set) {
+// //     console.log(item);
+// // }
+// set.delete(2)
+// console.log(set.has(1))
+// console.log(set.has(29))
+// set.forEach(element => {console.log(element)
+
+// });
+
+// my = Array.from(set);
+// console.log(my);
+
+// let mySetto = new Set()
+// mySetto.add("Tony")
+// mySetto.add(2)
+// mySetto.add(3)
+// mySetto.add("Tony")
+// mySetto.add("Tony")
+// console.log();
+// console.log(mySetto.size)
+
+// myArray = Array.from(mySetto)
+// console.log(myArray.length);
+
+// let cellNumber = "0992584759";
+// numberArray = Array.from(cellNumber);
+// console.log(numberArray);
+// numberArray.forEach(element => {console.log(element)
+
+// });
+
+//Inicio de Maps
+
+// let mapa = new Map()
+// mapa.set("Nombre", "Tony")
+// mapa.set("Apellido", "Veliz")
+// mapa.set("Edad", 30);
+
+// console.log(mapa);
+// console.log(mapa.size);
+// console.log(mapa.has("Nombre"));
+// console.log(mapa.get("Nombre"));
+// mapa.set("Nombre", "Antony Veliz")
+// console.log(mapa.get("Nombre"));
+// mapa.delete("Apellido")
+// console.log(mapa);
+
+// for (let [key, value] of mapa) {
+//     console.log(`Llave: ${key}, Valor:${value}`)
+// }
+
+// let mapa2 = new Map([
+//     ["Name:", "Tonsvz"],
+//     ["Music:", "Rock"],
+//     ["Age:", "35"]
+// ])
+// console.log(mapa2);
+// console.log(mapa2.size);
+// for (let [key, value] of mapa2) {
+//     console.log(key, value);
+// }
+
+// const llavesMapa2 = [...mapa2.keys()]
+// const valoresMapa2 = [...mapa2.values()]
+
+// console.log(llavesMapa2)
+// console.log(valoresMapa2)
+
+//inicio Iterables & Iteradores.
+// const iterable = new Set([1,2,3,3,3,4,5,6,6])
+// const iterador = iterable[Symbol.iterator]()
+
+// console.log(iterable);
+// console.log(iterador);
+
+// let next = iterador.next();
+// while (!next.done) {
+//     console.log(next.value);
+//     next=iterador.next();
+// }
+// // console.log(iterador.next());
+// // console.log(iterador.next());
+// // console.log(iterador.next());
+// // console.log(iterador.next());
+// // console.log(iterador.next());
+// // console.log(iterador.next());
+// // console.log(iterador.next());
+// // console.log(iterador.next());
+// // console.log(iterador.next());
+// // console.log(iterador.next());
+// // console.log(iterador.next());
+// // console.log(iterador.next());
+
+//Generadores //Digamos que un Generador es convertir el codigo de una funcion en iterable
+
+// function* e() {
+//     yield "Hola";
+//     console.log("Hola, este es mi primer yield");
+//     yield "Hola 2";
+//     console.log("Seguimos con mas instrucciones de codigo dentro de nuestra funcion");
+//     yield "Hola 3";
+//     yield "Hola 4";
+
+// }
+
+// let iterador = e();
+// // console.log(iterador.next());
+// // console.log(iterador.next());
+// // console.log(iterador.next());
+// // console.log(iterador.next());
+// // console.log(iterador.next());
+
+// // for (let y of iterador){ //Iterador con for, asignandolo a una variable, en este caso "y".
+// //     console.log(y)
+// // }
+
+// const arr = [...e()];
+// console.log(arr);
+
+// function cuadrado(valor) {
+//     setTimeout(() => {
+//         return console.log({
+//             valor,
+//             resultado: valor * valor
+//         })
+//     }, Math.random() * 1000)
+
+//     return {
+//         valor,
+//         resultado: valor * valor
+//     }
+// }
+
+// function* generador() {
+//     console.log("Inicio del Generador")
+//     yield cuadrado(0);
+//     yield cuadrado(1);
+//     yield cuadrado(2);
+//     yield cuadrado(3);
+//     yield cuadrado(4);
+//     yield cuadrado(5);
+//     console.log("Fin del Generador")
+// }
+
+// let gen = generador();
+
+//     for (let y of gen){
+//         console.log(y);
+//     }
