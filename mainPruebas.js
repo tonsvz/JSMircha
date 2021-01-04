@@ -51,7 +51,7 @@
 //         string = string.toLocaleLowerCase();
 //         text = text.toLocaleLowerCase();
 
-    
+
 // let i = 0,
 //     counter= 0;
 
@@ -129,11 +129,11 @@
 
 //     for (let i = number; i >1 ; i--) {
 //         factorial*=i;
-        
+
 //     }
 
 //     return console.log(`El factorial de ${number} es ${factorial}`);   
-    
+
 // }
 
 // factorial(5)
@@ -147,7 +147,7 @@
 
 //     if(unidad=== undefined) console.warn("No ingresaste el tipo de grado a convertir");
 //     if (typeof unidad !=="string") return console.error(`El valor ${unidad} ingresado, NO es una cadena de texto`);
-    
+
 //     if(unidad.length !==1 || !/(C|F)/i.test(unidad)) return console.warn("El valor de unidad no es Reconocido");
 
 //     if (unidad === "C"|| unidad ==="c") {
@@ -161,3 +161,160 @@
 // convertidorGrados()
 // convertidorGrados(100,"c")
 // convertidorGrados(100,"F")
+
+//calculador de Potencias
+// switch (prompt("Como esta el clima?")) {
+//     case "Lluvioso":
+//         console.log("Recuerda salir con paraguas");
+//         break;
+
+//     case "Soleado":
+//         console.log("Recuerda usar protector solar");
+//         break;
+
+//     case "Mardiciado":
+//         console.log("Recuerda mandar a joder a todo mundo");
+//         break;
+// }
+
+
+//Con ciclo While
+// let multTimes = (number, pow, counter, multiP) => {
+//     while (counter < pow) {
+//         multiP *= number;
+//         counter++
+//     }
+//     console.log(multiP);
+// }
+
+// multTimes(4, 4, 0, 1)
+
+//Con ciclo for
+
+// multTimes2 = (number, pow) => {
+//     let multiP = 1;
+//     for (let counter = 0; counter < pow; counter++) {
+//         multiP *= number
+//     }
+
+//     console.log(multiP);
+// }
+
+// multTimes2(2, 10)
+
+// loopFinder = () => {
+//     for (let number = 20;; number++) {
+//         if (number % 7 === 0) {
+//             console.log(number);
+//             break;
+//         }
+//     }
+// }
+// loopFinder()
+
+// hashPyramid = (hash, times) => {
+//     for (let counter = 0; counter < times; counter++) {
+//         console.log(hash);
+//         hash = hash + "#";
+//     }
+// }
+
+// hashPyramid("#", 7)
+
+//Fizz Buzz
+// let fizzBuzz = () => {
+//     for (let counter = 1; counter < 100; counter++) {
+//         if (counter % 3 === 0) {
+//             console.log(counter + " Fizz");
+//         } else if (counter % 5===0) {
+//             console.log(counter + " Buzz");
+//         }else if (counter % 15){
+//             console.log(counter + " FizzBuzz")
+
+//         }else{
+//             console.log(counter)
+//         } 
+//     }
+// }
+// fizzBuzz();
+
+// calcPow = (number, pow, mult = 1) => {
+//     for (let i = 0; i < pow; i++) {
+//         mult = mult * number;
+//     }
+//     console.log(mult);
+// }
+
+// calcPow(2, 10)
+
+// calcPow2 = (number, pow) => {
+//     let multP = 1,
+//         i = 0;
+//     while (i < pow) {
+//         multP = multP * number
+//         i++
+//     }
+//     console.log(multP);
+// }
+
+// calcPow2(2, 10)
+
+// Scope Global / Local
+
+// let x = 20;
+// if (true) {
+//     let y = 30;
+//     var z = 50
+//     console.log(x + y + z);
+//     console.log(y)
+// }
+// console.log(x)
+// console.log(z)
+
+// const breaking = () => {
+//     for (let number = 20;; number++) {
+//         if (number % 7 === 0) {
+//             console.log(number);
+//             break;
+//         }
+//     }
+// }
+
+// breaking()
+
+//Recipe Cheesecake 
+
+// const cheesecakeRecipe = (number) => {
+//     const recipe = (cantidad, unidad, ingrediente) => {
+//         let cantidadFinal = cantidad * number;
+//         if (cantidadFinal > 1000) {
+//             unidad = "Kg"
+//             cantidadFinal /= 1000;
+//             unidad += "s";
+//         } else if (number > 1) {
+//             unidad += "s";
+//         }
+//         console.log(`${cantidadFinal} ${unidad} de ${ingrediente}`)
+//     }
+//     console.log(`Receta para ${number} Cheesecake`)
+//     recipe(250, "Gr", "Galleta Maria Molida")
+//     recipe(130, "Gr", "Mantequilla sin Sal")
+//     recipe(2, "Cucharada", "Azucar")
+//     recipe(4, "Paquete", "Queso Crema a Temperatura Ambiente")
+//     recipe(1, "1/4", "Taza de leche Condensada")
+//     recipe(1, "Taza", "Jugo de limon")
+//     recipe(1, "Cucharadita", "Extracto de Vainilla")
+// }
+
+// cheesecakeRecipe(5)
+// function addTester (x) {
+//     return function(){
+//             return x*x
+//     }
+// }
+
+// tester1 = addTester(5)
+// tester2 = addTester(10)
+
+// console.log(tester1(5))
+// console.log(tester2(10))
