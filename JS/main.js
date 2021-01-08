@@ -1261,36 +1261,133 @@ https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular#Construcci%C3%B3n_de_una_ex
 //     }
 
 
- /* **********     Curso JavaScript: 55. Proxies - #jonmircha     ********** */
-    //  const persona = {
-    //   nombre: "",
-    //   apellido: "",
-    //   edad: 0
-    // }
-    // const manejador = {
-    //   set(obj, prop, valor) {
-    //     if (Object.keys(obj).indexOf(prop) === -1) {
-    //       return console.error(`La propiedad "${prop}" no existe en el objeto persona.`);
-    //     }
-    //     if (
-    //       (prop === "nombre" || prop === "apellido") &&
-    //       !(/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/g.test(valor))
-    //     ) {
-    //       return console.error(`La propiedad "${prop}"" sólo acepta letras y espacios en blanco`);
-    //     }
-    //     obj[prop] = valor;
-    //   }
-    // }
-    // const jon = new Proxy(persona, manejador);
-    // jon.nombre = "Jon";
-    // jon.apellido = "MirCha";
-    // jon.edad = 35;
-    // jon.twitter = "@jonmircha";
-    // console.log(jon);
-    // console.log(persona);
+/* **********     Curso JavaScript: 55. Proxies - #jonmircha     ********** */
+//  const persona = {
+//   nombre: "",
+//   apellido: "",
+//   edad: 0
+// }
+// const manejador = {
+//   set(obj, prop, valor) {
+//     if (Object.keys(obj).indexOf(prop) === -1) {
+//       return console.error(`La propiedad "${prop}" no existe en el objeto persona.`);
+//     }
+//     if (
+//       (prop === "nombre" || prop === "apellido") &&
+//       !(/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/g.test(valor))
+//     ) {
+//       return console.error(`La propiedad "${prop}"" sólo acepta letras y espacios en blanco`);
+//     }
+//     obj[prop] = valor;
+//   }
+// }
+// const jon = new Proxy(persona, manejador);
+// jon.nombre = "Jon";
+// jon.apellido = "MirCha";
+// jon.edad = 35;
+// jon.twitter = "@jonmircha";
+// console.log(jon);
+// console.log(persona);
 
 //     const objUsers = {};
 //     const users = ["Tony","Jose","Luis","Kata"];
 
 // users.forEach((users,index)=>objUsers[`id_${index}`] = users);
 // console.log(objUsers);
+
+// function makeSizer(size){
+//     return function(){
+//         document.body.style.fontSize = size + 'px'
+//     }
+// }
+
+// let size12 = makeSizer(142);
+
+// document.getElementById('size-12').onclick = size12;
+
+// console.log(this);
+// console.log(window);
+// console.log(this === window);
+
+// this.nombre = "Contexto Global"
+
+// function imprimir() {
+//     console.log(this.nombre);
+
+// }
+// imprimir();
+
+// const obj = {
+//     nombre: "Contexto Objeto",
+//     imprimir: function () {
+//         console.log(this.nombre);
+//     }
+// }
+
+// obj.imprimir();
+
+// const obj2 = {
+//     nombre: "Contexto Objeto2",
+//     imprimir
+// }
+
+
+// obj2.imprimir();
+
+// const obj3 = {
+//     nombre: "Contexto Objeto3",
+//     imprimir: () => {
+//         console.log(this.nombre);
+//     }
+// }
+
+// obj3.imprimir();
+
+// function person(name) {
+//     this.nombre = name;
+//     return () => console.log(this.nombre)
+//     //return console.log(this.nombre)
+// }
+
+// let tony = new person("Tony")
+// tony();
+// this.lugar = "Contexto Global"
+// function saludar(saludo,aQuien) {
+//     console.log(`${saludo} ${aQuien} desde ${this.lugar}`);
+// }
+
+// saludar("Hola","Tony");
+
+// const obj = {
+//     lugar:"Contexto Objeto"
+// }
+
+// saludar.call(obj,"Hola","Tony")
+
+// var coffee = "Typica"
+
+// function drinkCoffee() {
+//     let coffee = "Robusta"
+//     console.log('Me gusta el cafe de Variedad ' + coffee)
+
+//     function anotherCoffee() {
+//         console.log('Yo prefiero el cafe de Variedad ' + window.coffee)
+//     }
+//     return anotherCoffee();
+
+// }
+
+// drinkCoffee();
+
+//59 JSON
+
+// let json = {
+//     cadena:"Tony",
+//     edad:"Veliz",
+//     booleano:true,
+//     arreglo:["correr","musica","programar"],
+
+// }
+// console.log(JSON.parse("{}"))
+// console.log(JSON.parse("[1,2,3]"))
+

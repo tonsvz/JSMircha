@@ -318,3 +318,73 @@
 
 // console.log(tester1(5))
 // console.log(tester2(10))
+
+// const tresLeches = (quantity) => {
+//     const recipe = (cantidad,unidad,ingrediente) => {
+//         let totalIngredients = quantity * cantidad;
+//         if (totalIngredients > 1000){
+//             unidad = "Kg"
+//             totalIngredients/= 1000;
+//             unidad = unidad + "s"
+
+//         }else if(quantity> 1){
+//             unidad = unidad + "s"
+
+//         }else if(cantidad > 1){
+//             unidad = unidad + "s"
+//         }
+//         console.log(`${totalIngredients} ${unidad} ${ingrediente}`)
+//     }
+//     console.warn(`Receta para ${quantity} Tres Leches`);
+//     console.warn("Para el Bizcocho");
+//     recipe(4,"huevo","")
+//     recipe(150,"Gr","Azucar")
+//     recipe(1,"Cucharadita","Esencia de Vainilla")
+//     recipe(95,"Gr","Harina de Trigo Todo uso")
+//     console.warn("Para la Crema");
+//     recipe(410,"Gr","Leche Evaporada")
+//     recipe(370,"Gr","Leche Condensada")
+//     recipe(370,"Gr","Crema de Leche")
+//     console.warn("Para el Merengue")
+//     recipe(125,"Gr","Claras de Huevo")
+//     recipe(250,"Gr","Azucar")
+//     recipe(2,"Cucharadita","Cremor Tartaro")
+//     recipe(1,"Cucharadita","Sal")
+//     console.warn("Precalentar el horno a 180°C. Preparar un molde o refractario de 24x31 cm de diámetro con spray antiadherente o mantequilla derretida. Apartar")
+//     console.warn("Separar las claras de las amarillas de los huevos para hacer el bizcocho. Colocar las 4 claras en un bowl y mezclar con la batidora a velocidad media hasta que se vea como una especie de espuma blanca y haya levantado. Agregar el azúcar y seguir batiendo hasta que se tenga una mezcla blanca y brillante.");
+//     console.warn("Reducir la velocidad y agregar las yemas de huevo y la vainilla, mezclándose hasta que se incorporen");
+//     console.warn("Retirar de la batidora y agregar la harina en 2-3 partes con una espátula de goma en movimientos envolventes. Tener cuidado de no mezclar en exceso sino justo hasta que la harina se haya incorporado y no se vean grumos.");
+//     console.warn("Verter la mezcla en un molde de vidrio o porcelana y hornear por 20 minutos o hasta observar que la superficie se ha dorado y que cuando se introduce un palillo de madera en el medio del bizcocho, este salga limpio.");
+//     console.warn("Mientras el bizcocho se hornea, colocar en la licuadora las tres leches y mezclarlas hasta que se hayan unido.");
+//     console.warn("Al retirar el bizcocho del horno, abrir huequitos por toda la superficie del mismo con un tenedor, esto permitirá que las tres leches penetren y se distribuyan por toda la torta.");
+//     console.warn("Verter las tres leches previamente mezcladas poco a poco y equitativamente por toda la superficie de la torta. A medida que se vaya agregando el líquido, esperar que el bizcocho lo vaya absorbiendo.");
+//     console.warn("Cocinar las claras y el azúcar a Baño María hasta que alcancen 55-59 grados centígrados (si no se tiene un termómetro de cocina, este punto será en el que se observe que el azúcar se ha diluido por completo en el huevo y no se vean grumos), hay que remover constantemente o de lo contrario la clara se cocinará.");
+//     console.warn("En un bowl limpio y seco de una batidora vaciar la mezcla de huevo y azúcar y agregar el cremor tártaro. Batir en velocidad media-rápida hasta que se vea brillante, sedoso y al levantar las varillas de la batidora se hagan picos que se mantienen sin caerse. Otro buen indicador de que el merengue está listo es que al tocar el bowl, ya no se siente caliente sino a temperatura ambiente. Se debe tener cuidado de no batir demasiado, ya que esto puede hacer que pierda su textura.");
+//     console.warn("Colocar el merengue en una manga de repostería con la boquilla de decoración de preferencia y realizar copitos por toda la superficie de la torta, también se puede colocar todo el merengue encima de la torta y esparcirlo con la ayuda de una espátula de repostería, como hice yo. Se puede volver a meter la torta decorada al horno en el ajuste de gratinado por 5 minutos o un soplete de cocina para tostar la superficie del merengue.");
+//     console.warn("Dejar enfriar al menos 3 horas o preferiblemente durante toda la noche.");
+// }
+
+// tresLeches(3)
+
+// let ceros  = (number,amplitud) => {
+//     let string = String(number);
+//     while(string.length < amplitud){
+//         string = "0" + string
+//     }
+//     return string
+// }
+
+// let farmInventory = (cows,chickens,pigs) => {
+//     console.log(`${ceros(cows,3)} Vacas`)
+//     console.log(`${ceros(chickens,3)} Pollos`)
+//     console.log(`${ceros(pigs,3)} Cerdos`)
+// }
+
+// farmInventory(3,4,5)
+
+// minDetect = (number1,number2) => {
+//     console.log(`El numero menor comparando ${number1} con ${number2} es ${Math.min(number1,number2)}`)
+
+// }
+
+// minDetect(100,300);
