@@ -1,78 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/domStyle.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/domStyle.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>WEB APIs</h1>
     <h2>DOM: Document Object Model</h2>
     <h2>BOM: Browser Object Model</h2>
     <h2>CSSOM: CSS Object Model</h2>
     <h2>WEB APIs</h2>
     <ul>
-        <li>Eventos</li>
-        <li>Forms</li>
-        <li>AJAX - Fetch</li>
-        <li>History</li>
-        <li>Web Storage</li>
-        <li>Geolocation</li>
-        <li>Drag & Drop</li>
-        <li>Indexed DB</li>
-        <li>Canvas</li>
-        <li>MatchMedia</li>
-        <li>etc..</li>
+      <li>Eventos</li>
+      <li>Forms</li>
+      <li>AJAX - Fetch</li>
+      <li>History</li>
+      <li>Web Storage</li>
+      <li>Geolocation</li>
+      <li>Drag & Drop</li>
+      <li>Indexed DB</li>
+      <li>Canvas</li>
+      <li>MatchMedia</li>
+      <li>etc..</li>
     </ul>
-    <br>
-    <hr>
-    <br>
+    <br />
+    <hr />
+    <br />
     <h3>Manejo del DOM</h3>
     <p id="que-es">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, laboriosam cum quod, perferendis eveniet
-        pariatur
-        facere doloribus adipisci consequatur totam est dolorum vero nisi voluptate porro explicabo quo necessitatibus
-        blanditiis.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+      laboriosam cum quod, perferendis eveniet pariatur facere doloribus
+      adipisci consequatur totam est dolorum vero nisi voluptate porro explicabo
+      quo necessitatibus blanditiis.
     </p>
 
     <nav id="menu">
-        <ul>
-            <li><a href="#">Section 1</a></li>
-            <li><a href="#">Section 2</a></li>
-            <li><a href="#">Section 3</a></li>
-            <li><a href="#">Section 4</a></li>
-            <li><a href="#">Section 5</a></li>
-        </ul>
+      <ul>
+        <li><a href="#">Section 1</a></li>
+        <li><a href="#">Section 2</a></li>
+        <li><a href="#">Section 3</a></li>
+        <li><a href="#">Section 4</a></li>
+        <li><a href="#">Section 5</a></li>
+      </ul>
     </nav>
-    <input type="text" name="nombre" placeholder="Nombre">
-    <a class="link-dom" href="dom.html" data-id="1" data-description="Document Object Model" >DOM</a>
+    <input type="text" name="nombre" placeholder="Nombre" />
+    <a
+      class="link-dom"
+      href="dom.html"
+      data-id="1"
+      data-description="Document Object Model"
+      >DOM</a
+    >
     <section class="cards">
-        <figure class="card">
-            <img src="https://placeimg.com/200/200/tech" alt="Tech">
-            <figcaption>Tech</figcaption>
-        </figure>
-        <figure class="card">
-            <img src="https://placeimg.com/200/200/animals" alt="Animals">
-            <figcaption>Animals</figcaption>
-        </figure>
-        <figure class="card">
-            <img src="https://placeimg.com/200/200/people" alt="People">
-            <figcaption>People</figcaption>
-        </figure>
-        <figure class="card">
-            <img src="https://placeimg.com/200/200/arch" alt="Architecture">
-            <figcaption>Architecture</figcaption>
-        </figure>
-        <figure class="card">
-            <img src="https://placeimg.com/200/200/nature" alt="Nature">
-            <figcaption>Nature</figcaption>
-        </figure>
+      <figure class="card">
+        <img src="https://placeimg.com/200/200/tech" alt="Tech" />
+        <figcaption>Tech</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://placeimg.com/200/200/animals" alt="Animals" />
+        <figcaption>Animals</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://placeimg.com/200/200/people" alt="People" />
+        <figcaption>People</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://placeimg.com/200/200/arch" alt="Architecture" />
+        <figcaption>Architecture</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="https://placeimg.com/200/200/nature" alt="Nature" />
+        <figcaption>Nature</figcaption>
+      </figure>
     </section>
+    <template id="templateCard">
+      <figure class="card">
+        <img src="" alt="" />
+        <figcaption></figcaption>
+      </figure>
+    </template>
+    <!-- Eventos -->
+    <h3>Eventos Javascript</h3>
+    <h4>Manejadores de Eventos</h4>
+    <button onclick="holaMundo()">Evento con atributo HTML</button>
+    <br /><br />
+    <button id="evento-Semantico">Evento con Manejador Semantico</button>
+    <br /><br />
+    <button id="eventoMultiple">Evento con Manejador Multiple</button>
+    <br /><br />
+    <button id="eventoRemover">
+      Removiendo Eventos con Manejadores Multiples
+    </button>
+    <button id="rhapsody">Dawn of victory</button>
+    <br /><br />
+    <h4>Flujo de Eventos</h4>
+    <section class="eventos-flujo">
+      <div class="uno">
+        1
+        <div class="dos">
+          2
+          <div class="tres">
+            3
+            <a href="https://jonmircha.com/" target="_blank" rel="noopener"
+              >jonmircha.com</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <h3>Manejo del BOM (Browser Object Model)</h3>
     <script src="/JS/mainDom.js"></script>
-</body>
-
+  </body>
 </html>
-
