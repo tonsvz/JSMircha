@@ -26,7 +26,6 @@
 //         this.Tiempo = Tiempo
 //     }
 
-
 // }
 
 // const Tony = new Barista ("Rio Intag", "La Marzocco", "Tesalia", "Tony  Veliz");
@@ -43,14 +42,13 @@
 //lets rocck
 
 // let stringToArray = (string="", text="") => {
-//     if (!string) 
+//     if (!string)
 //         return console.log("Debes ingresar un texto a evaluar");
-//     if (!text) 
+//     if (!text)
 //         return console.log("Debes ingresar un texto a evaluar");
 
 //         string = string.toLocaleLowerCase();
 //         text = text.toLocaleLowerCase();
-
 
 // let i = 0,
 //     counter= 0;
@@ -67,8 +65,6 @@
 
 // }
 
-
-
 // class person {
 //     constructor(name, age) {
 //         this.age = age;
@@ -78,7 +74,6 @@
 //     salute() {
 //         console.log(`Hello im ${this.name} and my age is ${this.age} and im a ${tony.getSex}`);
 //     }
-
 
 // }
 
@@ -116,9 +111,6 @@
 //         let marihuana = new weed("Sativa", "Green/Blue")
 //     marihuana.high();
 
-
-
-
 // const factorial = (number=undefined) => {
 //     if(number===undefined) return console.error("Se debe ingresar un numero para evaluar");
 //     if(typeof number !=="number") return console.error("Solo se permiten numeros para evaluar");
@@ -132,12 +124,11 @@
 
 //     }
 
-//     return console.log(`El factorial de ${number} es ${factorial}`);   
+//     return console.log(`El factorial de ${number} es ${factorial}`);
 
 // }
 
 // factorial(5)
-
 
 //Programa una funcion para convertir grados Celsius a Farenheit y visceversa
 
@@ -176,7 +167,6 @@
 //         console.log("Recuerda mandar a joder a todo mundo");
 //         break;
 // }
-
 
 //Con ciclo While
 // let multTimes = (number, pow, counter, multiP) => {
@@ -233,7 +223,7 @@
 
 //         }else{
 //             console.log(counter)
-//         } 
+//         }
 //     }
 // }
 // fizzBuzz();
@@ -282,7 +272,7 @@
 
 // breaking()
 
-//Recipe Cheesecake 
+//Recipe Cheesecake
 
 // const cheesecakeRecipe = (number) => {
 //     const recipe = (cantidad, unidad, ingrediente) => {

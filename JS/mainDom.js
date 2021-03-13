@@ -319,7 +319,6 @@ console.log(window.innerHeight);
 console.log(window.outerWidth);
 console.log(window.outerHeight);
 
-<<<<<<< HEAD
 window.addEventListener("scroll", (e) => {
   console.clear();
   console.log("*******Evento Scroll*********");
@@ -327,18 +326,3 @@ window.addEventListener("scroll", (e) => {
   console.log(window.screenY);
   console.log(e);
 });
-=======
-document.write("<h3>Continentes del Mundo</h3>");
-document.body.appendChild($ul2);
-$ul2.innerHTML = "";
-continentes.forEach((el) => ($ul2.innerHTML += `<li>${el}</li>`));
-
-const $cards2 = document.querySelector(".cards"),
-  $template = template.querySelector("#templateCard").content,
-  $fragment2 = document.createDocumentFragment(),
-  cardContent = {
-    image: image,
-  };
-
-const $lk = () => {};
->>>>>>> f4fa9d46d7e7dff72324a9403641ec3b34b1d339
