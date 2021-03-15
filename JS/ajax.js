@@ -36,33 +36,68 @@
 // })();
 // asdasdasdasd
 
-(() => {
-  const $fetch = document.getElementById("fetch"),
-    $fragment = document.createDocumentFragment();
-  fetch("https://jsonplaceholder.typicode.com/users")
-    // .then((res) => {
-    //   console.log(res);
-    //   return res.ok ? res.json() : Promise.reject(res);
-    // })
-    .then((res) => (res.ok ? res.json() : Promise.reject(res)))
-    .then((json) => {
-      console.log(json);
-      json.forEach((element) => {
-        const $list = document.createElement("li");
-        $list.innerHTML = `${element.name} - ${element.email} - ${element.phone}`;
-        $fragment.appendChild($list);
-      });
-      $fetch.appendChild($fragment);
-      //   $fetch.innerHTML = json;
-    })
-    .catch((err) => {
-      console.log("Estamos en el catch", err);
-      let message = err.statusText || "Ocurrio un error";
-      $fetch.innerHTML = `Error ${err.status}: ${message}`;
-    })
-    .finally(() => {
-      console.log(
-        "Esto se Ejecutara Independientemente de el resultado obtenido."
-      );
-    });
-})();
+/* API Fetch */
+// (() => {
+//   const $fetch = document.getElementById("fetch"),
+//     $fragment = document.createDocumentFragment();
+//   fetch("/assets/users.json")
+//   // .then((res) => {
+//   //   console.log(res);
+//     //   return res.ok ? res.json() : Promise.reject(res);
+//     // })
+//     .then((res) => (res.ok ? res.json() : Promise.reject(res)))
+//     .then((json) => {
+//       console.log(json);
+//       json.forEach((element) => {
+//           $list.innerHTML = `${element.name} - ${element.email} - ${element.phone}`;
+//         const $list = document.createElement("li");
+//         $fragment.appendChild($list);
+//     });
+//       $fetch.appendChild($fragment);
+//       //   $fetch.innerHTML = json;
+//     })
+//     .catch((err) => {
+//       console.log("Estamos en el catch", err);
+//       let message = err.statusText || "Ocurrio un error";
+//       $fetch.innerHTML = `Error ${err.status}: ${message}`;
+//     })
+//     .finally(() => {
+//       console.log(
+//         "Esto se Ejecutara Independientemente de el resultado obtenido."
+//       );
+//     });
+// })();
+
+/* Async Await Fetch */
+
+// (() => {
+//   const $fetchAsync = document.getElementById("fetch"),
+//     $fragment = document.createDocumentFragment();
+//   async function getData() {
+//     try {
+//       let res = await fetch("https://jsonplaceholder.typicode.com/users"),
+//         json = await res.json();
+//       console.log(res, json);
+
+//       if (res.ok === false)
+//         throw {
+//           status: res.status,
+//         };
+
+//       json.forEach((element) => {
+//         const $li = document.createElement("li");
+//         $li.innerHTML = `${element.name} -- ${element.phone}`;
+//         $fragment.appendChild($li);
+//       });
+//       $fetchAsync.appendChild($fragment);
+//     } catch (error) {
+//       console.log(error);
+//       let message = error.statusText || "Ocurrio un Error";
+//       $fetchAsync.innerHTML = `Error ${error.status} : ${message}`;
+//     } finally {
+//       console.log("Esto se ejecuta independientemente de la respuesta.");
+//     }
+//   }
+
+//   getData();
+// })();
