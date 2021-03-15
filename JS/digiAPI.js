@@ -6,22 +6,21 @@ let digiAPI = "https://digimon-api.vercel.app/api/digimon";
 
 async function digimons(url) {
   try {
-    $main.innerHTML = `<img class='loader' src="/assets/loader.svg" alt="Loading...">`;
-    let res = await fetch(url),
-      resJSON = await res.json(),
-      $template = "";
-    // console.log(resJSON);
+    $main.innerHTML = `<img class='loader' src='/assets/loader.svg' alt=....Loading'>`;
 
-    for (let i = 0; i < resJSON.length; i++) {
-      //   console.log(resJSON[i]);
+    let res = await fetch(url),
+      resJSON = await res.json();
+    $template = "";
+
+    for (i = 0; i < resJSON.length; i++) {
       console.log(resJSON[i]);
-      $template += `<div><img class= 'digiPICS' src= '${resJSON[i].img}' alt='${resJSON[i].name}'><figcaption>${resJSON[i].name}</figcaption></div> `;
-      $main.innerHTML = $template;
+
+      $template = `<div><img src="${resJSON[i].img}" alt="${resJSON[i].name}" class="digiPICS"><figcaption>${resJSON[i].name}</figcaption></div>`;
+      $main.innerHTML += $template;
     }
   } catch (error) {
-    let message =
-      error.statusText || "Error 404, No se pudo establecer la conexion";
-    $main.innerHTML = `<p>${message} </p>`;
+    alert(`ERROR, SOLO BBC'S PERMITIDOS PAPI`);
+    console.error(`ERROR, SOLO BBC'S PERMITIDOS PAPI`);
   }
 }
 

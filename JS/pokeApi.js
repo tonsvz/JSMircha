@@ -31,7 +31,9 @@ async function loadPokemons(url) {
           };
 
         $template += `<figure>
-          <img src= '${pokemon.sprites.front_default}' alt='${pokemon.name}'>
+          <img class='gay' src= '${pokemon.sprites.front_default}' alt='${
+          pokemon.name
+        }'>
           <figcaption class='ptext'>${pokemon.name.toUpperCase()}</figcaption>
           </figure>`;
       } catch (error) {}
